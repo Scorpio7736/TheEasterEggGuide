@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Call of Duty Zombies Palette -->
+    <color name="CUSTOM_BACKGROUND_DARK">#212121</color>
+    <color name="CUSTOM_TEXT_COLOR">#E0E0E0</color>
+    <color name="CUSTOM_BACKGROUND_LIGHT">#424242</color>
+    <color name="CUSTOM_ACCENT_COLOR">#B71C1C</color>
+    <color name="CUSTOM_HIGHLIGHT_COLOR">#29B6F6</color>
+</resources>
