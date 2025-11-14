@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@color/CUSTOM_BACKGROUND_DARK" />
+    <item android:drawable="@color/CUSTOM_ITEM_background_dark" />
     <item
         android:width="120dp"
         android:height="120dp"

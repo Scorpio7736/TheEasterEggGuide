@@ -4,10 +4,26 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- Call of Duty Zombies Palette -->
-    <color name="CUSTOM_BACKGROUND_DARK">#070D19</color>
-    <color name="CUSTOM_TEXT_COLOR">#E4ECF7</color>
-    <color name="CUSTOM_BACKGROUND_LIGHT">#324861</color>
-    <color name="CUSTOM_ACCENT_COLOR">#FF8A3C</color>
-    <color name="CUSTOM_HIGHLIGHT_COLOR">#27C6FF</color>
+
+    <!-- Background Shades -->
+    <color name="CUSTOM_ITEM_background_dark">#161716</color>      <!-- Near Black -->
+    <color name="CUSTOM_ITEM_background_light">#1E1E1E</color>     <!-- Charcoal Black -->
+
+    <!-- Text / Glow Colors -->
+    <color name="CUSTOM_ITEM_text_primary_light">#9EDEDD</color>   <!-- Bright Cyan -->
+    <color name="CUSTOM_ITEM_text_secondary_light">#5BA0A5</color> <!-- Medium Cyan -->
+    <color name="CUSTOM_ITEM_text_shadow_dark">#2B4446</color>     <!-- Dim Cyan -->
+
+    <!-- Highlight / FX Colors -->
+    <color name="CUSTOM_ITEM_highlight_light">#9EDEDD</color>      <!-- UI Glow Highlight -->
+    <color name="CUSTOM_ITEM_highlight_dark">#377D82</color>       <!-- Deep Teal Glow -->
+
+    <!-- Accent Metals -->
+    <color name="CUSTOM_ITEM_accent_copper_dark">#724D32</color>   <!-- Burnt Copper -->
+    <color name="CUSTOM_ITEM_accent_bronze_dark">#443227</color>   <!-- Dark Bronze -->
+
+    <!-- Utility Colors (optional) -->
+    <color name="CUSTOM_ITEM_glow_core_light">#9EDEDD</color>
+    <color name="CUSTOM_ITEM_foreground_dark">#2B4446</color>
 
 </resources>

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/CUSTOM_BACKGROUND_DARK"
+    android:background="@color/CUSTOM_ITEM_background_dark"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
@@ -35,7 +35,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:indeterminate="true"
-        android:indeterminateTint="@color/CUSTOM_ACCENT_COLOR"
+        android:indeterminateTint="@color/CUSTOM_ITEM_highlight_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
