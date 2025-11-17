@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_maps"
         android:icon="@drawable/maps_icon"
@@ -11,7 +10,7 @@
         android:title="Profile" />
     <item
         android:id="@+id/nav_home"
-        app:actionLayout="@layout/custom_home_icon"
+        android:icon="@drawable/home_icon"
         android:title="Home" />
     <item
         android:id="@+id/nav_favorites"
