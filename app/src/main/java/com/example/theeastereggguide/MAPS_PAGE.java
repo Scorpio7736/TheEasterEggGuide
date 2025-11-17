@@ -2,6 +2,8 @@ package com.example.theeastereggguide;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,9 +13,6 @@ public class MAPS_PAGE extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.maps_page);
 
@@ -39,7 +38,36 @@ public class MAPS_PAGE extends AppCompatActivity {
                 R.layout.custom_spinner_item, // Use our custom layout
                 Enums.COD_GAME.values()
         );
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item); // Use our custom dropdown layout
         gameSpinner.setAdapter(adapter);
+
+        gameSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Enums.COD_GAME selectedGame = (Enums.COD_GAME) parent.getItemAtPosition(position);
+                Display_Map_Cells(selectedGame);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Do nothing
+            }
+        });
+    }
+    public void Display_Map_Cells(Enums.COD_GAME selectedGame) {
+        /*
+        LOGIC: JL
+        foreach map in selected game
+        display new map cell
+        display name
+        display cover art
+        make button call new map cell page with argument of map name
+
+         */
+
+
+
+
+
     }
 }
