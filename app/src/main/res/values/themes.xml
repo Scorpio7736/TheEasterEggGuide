@@ -10,7 +10,7 @@
     <!-- Splash Screen Theme -->
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/CUSTOM_ITEM_background_dark</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/app_logo</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_icon_drawable</item>
         <item name="postSplashScreenTheme">@style/Theme.TheEasterEggGuide</item>
     </style>
 </resources>

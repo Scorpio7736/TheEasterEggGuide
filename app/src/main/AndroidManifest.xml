@@ -11,16 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TheEasterEggGuide">
         <activity
-            android:name=".MAIN_PAGE"
+            android:name=".HOME_PAGE"
             android:exported="true"
             android:theme="@style/Theme.App.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HOME_PAGE" />
         <activity android:name=".MAPS_PAGE" />
     </application>
 
