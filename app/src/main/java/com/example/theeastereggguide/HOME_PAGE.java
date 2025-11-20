@@ -5,16 +5,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.splashscreen.SplashScreen;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HOME_PAGE extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Handle the splash screen transition.
-        SplashScreen.installSplashScreen(this);
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
@@ -33,6 +29,10 @@ public class HOME_PAGE extends AppCompatActivity {
             int itemId = item.getItemId();
             if (itemId == R.id.nav_maps) {
                 startActivity(new Intent(getApplicationContext(), MAPS_PAGE.class));
+                overridePendingTransition(0, 0);
+                return true;
+            } else if (itemId == R.id.nav_settings) {
+                startActivity(new Intent(getApplicationContext(), SETTINGS_PAGE.class));
                 overridePendingTransition(0, 0);
                 return true;
             }
