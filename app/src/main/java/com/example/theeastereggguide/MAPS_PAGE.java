@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.GridLayout;
 import android.widget.Spinner;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -54,20 +55,17 @@ public class MAPS_PAGE extends AppCompatActivity {
             }
         });
     }
+
     public void Display_Map_Cells(Enums.COD_GAME selectedGame) {
-        /*
-        LOGIC: JL
-        foreach map in selected game
-        display new map cell
-        display name
-        display cover art
-        make button call new map cell page with argument of map name
+        GridLayout mapsContainer = findViewById(R.id.maps_container);
+        mapsContainer.removeAllViews(); // Clear previous map cells
 
-         */
-
-
-
-
-
+        for (Enums.COD_MAP map : Enums.COD_MAP.values()) {
+            if (map.getGame() == selectedGame) {
+                Map_Page_Cell mapCell = new Map_Page_Cell(map);
+                View cellView = mapCell.createView(this, mapsContainer);
+                mapsContainer.addView(cellView);
+            }
+        }
     }
 }
