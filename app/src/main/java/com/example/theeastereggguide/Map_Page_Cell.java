@@ -1,6 +1,7 @@
 package com.example.theeastereggguide;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,14 @@ public class Map_Page_Cell {
 
         // TODO: Set the cover image for the map from the drawable folder you created.
         // You will need a way to map the enum to a drawable resource name.
+
+        cellView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, MAPPEGG_PAGE.class);
+                context.startActivity(intent);
+            }
+        });
 
         return cellView;
     }
