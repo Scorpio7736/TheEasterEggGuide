@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TheEasterEggGuide">
         <activity
-            android:name=".HOME_PAGE"
+            android:name=".MAIN_PAGE"
             android:exported="true"
             android:theme="@style/Theme.App.Starting">
             <intent-filter>
@@ -21,6 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".HOME_PAGE" />
         <activity android:name=".MAPS_PAGE" />
         <activity android:name=".MAPPEGG_PAGE" />
         <activity android:name=".SETTINGS_PAGE" />
