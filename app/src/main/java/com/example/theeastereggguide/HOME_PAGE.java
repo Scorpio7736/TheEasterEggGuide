@@ -5,12 +5,17 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.splashscreen.SplashScreen;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HOME_PAGE extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Handle the splash screen transition.
+        // This must be called before super.onCreate()
+        SplashScreen.installSplashScreen(this);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 

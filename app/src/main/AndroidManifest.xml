@@ -22,6 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MAPS_PAGE" />
+        <activity android:name=".SETTINGS_PAGE" />
+        <activity android:name=".ABOUT_ME" />
     </application>
 
 </manifest>
