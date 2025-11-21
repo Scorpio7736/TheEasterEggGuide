@@ -25,7 +25,6 @@ public class HOME_PAGE extends AppCompatActivity {
         if (firstStart) {
             showFirstTimeDialog();
         }
-
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setItemIconTintList(null);
         bottomNavigationView.setSelectedItemId(R.id.nav_home);
