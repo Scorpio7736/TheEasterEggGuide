@@ -1,5 +1,6 @@
 package com.example.theeastereggguide;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ public class Map_Page_Cell {
         this.map = map;
     }
 
+    @SuppressLint("DiscouragedApi")
     public View createView(Context context, ViewGroup parent) {
         // Inflate the layout for the cell
         LayoutInflater inflater = LayoutInflater.from(context);
@@ -27,13 +29,13 @@ public class Map_Page_Cell {
         // Set the data
         mapNameTextView.setText(map.toString());
 
-        // TODO: Set the cover image for the map from the drawable folder you created.
-        // You will need a way to map the enum to a drawable resource name.
+        if (mapCoverImageView != null) {
+            int drawableResourceId = context.getResources().getIdentifier(map.name().toLowerCase(), "drawable", context.getPackageName());
+            if (drawableResourceId != 0) {
+                mapCoverImageView.setImageResource(drawableResourceId);
+            }
+        }
 
         return cellView;
-    }
-
-    public Enums.COD_MAP getMap() {
-        return map;
     }
 }
