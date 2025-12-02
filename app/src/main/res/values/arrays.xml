@@ -1,0 +1,59 @@
+<resources>
+    <string-array name="genders">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Non-binary</item>
+        <item>Prefer not to say</item>
+    </string-array>
+
+    <string-array name="cod_maps">
+        <item>Nacht der Untoten</item>
+        <item>Verrückt</item>
+        <item>Shi No Numa</item>
+        <item>Der Riese</item>
+        <item>Kino der Toten</item>
+        <item>Five</item>
+        <item>Dead Ops Arcade</item>
+        <item>Ascension</item>
+        <item>Call of the Dead</item>
+        <item>Shangri-La</item>
+        <item>Moon</item>
+        <item>TranZit</item>
+        <item>Town</item>
+        <item>Farm</item>
+        <item>Bus Depot</item>
+        <item>Nuketown Zombies</item>
+        <item>Die Rise</item>
+        <item>Mob of the Dead</item>
+        <item>Buried</item>
+        <item>Origins</item>
+        <item>Shadows of Evil</item>
+        <item>The Giant</item>
+        <item>Der Eisendrache</item>
+        <item>Zetsubou No Shima</item>
+        <item>Gorod Krovi</item>
+        <item>Revelations</item>
+        <item>Nacht der Untoten (BO3)</item>
+        <item>Verrückt (BO3)</item>
+        <item>Shi No Numa (BO3)</item>
+        <item>Kino der Toten (BO3)</item>
+        <item>Ascension (BO3)</item>
+        <item>Shangri-La (BO3)</item>
+        <item>Moon (BO3)</item>
+        <item>Origins (BO3)</item>
+        <item>Dead Ops Arcade 2</item>
+        <item>IX</item>
+        <item>Voyage of Despair</item>
+        <item>Blood of the Dead</item>
+        <item>Classified</item>
+        <item>Dead of the Night</item>
+        <item>Ancient Evil</item>
+        <item>Alpha Omega</item>
+        <item>Tag der Toten</item>
+        <item>Dead Ops Arcade 3</item>
+        <item>Die Maschine</item>
+        <item>Firebase Z</item>
+        <item>Mauer der Toten</item>
+        <item>Forsaken</item>
+    </string-array>
+</resources>

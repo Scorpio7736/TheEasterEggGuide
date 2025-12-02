@@ -34,6 +34,10 @@ public class HOME_PAGE extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), SETTINGS_PAGE.class));
                 overridePendingTransition(0, 0);
                 return true;
+            } else if (itemId == R.id.nav_profile) {
+                startActivity(new Intent(getApplicationContext(), PROFILE_PAGE.class));
+                overridePendingTransition(0, 0);
+                return true;
             }
             return false;
         });
