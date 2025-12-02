@@ -8,9 +8,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.Serializable;
+
 public class Map_Page_Cell {
 
     private final Enums.COD_MAP map;
+    private final Maps_OBJECT_HANDLER mapsObjectHandler = new Maps_OBJECT_HANDLER();
 
     public Map_Page_Cell(Enums.COD_MAP map) {
         this.map = map;
@@ -31,12 +34,17 @@ public class Map_Page_Cell {
         // TODO: Set the cover image for the map from the drawable folder you created.
         // You will need a way to map the enum to a drawable resource name.
 
-        cellView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, MAPPEGG_PAGE.class);
-                context.startActivity(intent);
-            }
+        cellView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, MAPPEGG_PAGE.class);
+
+            Map_OBJECT mapData = mapsObjectHandler.getMapObject(map);
+
+            intent.putExtra("mapName", mapData.getMapName());
+            intent.putExtra("mainQuest", mapData.getMainQuest());
+            intent.putExtra("sideQuests", (Serializable) mapData.getSideQuests());
+            intent.putExtra("buildables", (Serializable) mapData.getBuildables());
+
+            context.startActivity(intent);
         });
 
         return cellView;
