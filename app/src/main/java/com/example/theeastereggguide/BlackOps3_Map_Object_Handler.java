@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class BlackOps3_Map_Object_Handler {
@@ -170,7 +171,7 @@ public class BlackOps3_Map_Object_Handler {
                 new Map_OBJECT(
                         Enums.COD_MAP.NACHT_DER_UNTOTEN_ZC.toString(),
                         R.drawable.nacht_boiii,
-                        new ArrayList<>(Arrays.asList(
+                        new ArrayList<>(List.of(
                                 "No Main Quest (Survival Map)"
                         )),
                         new ArrayList<>(Arrays.asList(
@@ -191,7 +192,7 @@ public class BlackOps3_Map_Object_Handler {
                 new Map_OBJECT(
                         Enums.COD_MAP.VERRUCKT_ZC.toString(),
                         R.drawable.verruckt_boiii,
-                        new ArrayList<>(Arrays.asList(
+                        new ArrayList<>(List.of(
                                 "No Main Quest (Survival Map)"
                         )),
                         new ArrayList<>(Arrays.asList(
@@ -212,7 +213,7 @@ public class BlackOps3_Map_Object_Handler {
                 new Map_OBJECT(
                         Enums.COD_MAP.SHI_NO_NUMA_ZC.toString(),
                         R.drawable.shinonuma_boiii,
-                        new ArrayList<>(Arrays.asList(
+                        new ArrayList<>(List.of(
                                 "No Main Quest (Survival Flow)"
                         )),
                         new ArrayList<>(Arrays.asList(
@@ -233,7 +234,7 @@ public class BlackOps3_Map_Object_Handler {
                 new Map_OBJECT(
                         Enums.COD_MAP.KINO_DER_TOTEN_ZC.toString(),
                         R.drawable.kinodertoten_boiii,
-                        new ArrayList<>(Arrays.asList(
+                        new ArrayList<>(List.of(
                                 "No Main Quest (Story Ties in ZC)"
                         )),
                         new ArrayList<>(Arrays.asList(
@@ -254,7 +255,7 @@ public class BlackOps3_Map_Object_Handler {
                 new Map_OBJECT(
                         Enums.COD_MAP.ASCENSION_ZC.toString(),
                         R.drawable.ascension_boiii,
-                        new ArrayList<>(Arrays.asList(
+                        new ArrayList<>(List.of(
                                 "Main Quest (Launch Rocket & Gersh EE)"
                         )),
                         new ArrayList<>(Arrays.asList(
@@ -275,7 +276,7 @@ public class BlackOps3_Map_Object_Handler {
                 new Map_OBJECT(
                         Enums.COD_MAP.SHANGRI_LA_ZC.toString(),
                         R.drawable.shangrila_boiii,
-                        new ArrayList<>(Arrays.asList(
+                        new ArrayList<>(List.of(
                                 "Time Travel Will Tell Main Quest"
                         )),
                         new ArrayList<>(Arrays.asList(
@@ -296,7 +297,7 @@ public class BlackOps3_Map_Object_Handler {
                 new Map_OBJECT(
                         Enums.COD_MAP.MOON_ZC.toString(),
                         R.drawable.moon_boiii,
-                        new ArrayList<>(Arrays.asList(
+                        new ArrayList<>(List.of(
                                 "Richtofen's Grand Scheme Main Quest"
                         )),
                         new ArrayList<>(Arrays.asList(
