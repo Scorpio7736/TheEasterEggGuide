@@ -6,6 +6,7 @@ import java.util.List;
 public class Map_OBJECT {
 
     private String mapName;
+    private int mapIcon;
     private ArrayList<String> mainQuest;
     private List<String> sideQuests;
     private List<String> buildables;
@@ -16,8 +17,9 @@ public class Map_OBJECT {
         this.buildables = new ArrayList<>();
     }
 
-    public Map_OBJECT(String mapName, ArrayList<String> mainQuest, List<String> sideQuests, List<String> buildables) {
+    public Map_OBJECT(String mapName, int mapIcon, ArrayList<String> mainQuest, List<String> sideQuests, List<String> buildables) {
         this.mapName = mapName;
+        this.mapIcon = mapIcon;
         this.mainQuest = mainQuest;
         this.sideQuests = sideQuests;
         this.buildables = buildables;
@@ -31,6 +33,14 @@ public class Map_OBJECT {
         this.mapName = mapName;
     }
 
+    public int getMapIcon() {
+        return mapIcon;
+    }
+
+    public void setMapIcon(int mapIcon) {
+        this.mapIcon = mapIcon;
+    }
+
     public ArrayList<String> getMainQuest() {
         return mainQuest;
     }
@@ -38,6 +48,8 @@ public class Map_OBJECT {
     public void setMainQuest(ArrayList<String> mainQuest) {
         this.mainQuest = mainQuest;
     }
+
+
 
     public List<String> getSideQuests() {
         return sideQuests;

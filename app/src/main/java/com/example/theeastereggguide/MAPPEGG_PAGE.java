@@ -2,6 +2,7 @@ package com.example.theeastereggguide;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,36 +28,45 @@ public class MAPPEGG_PAGE extends AppCompatActivity {
         LinearLayout mainQuestContent = findViewById(R.id.main_quest_content);
         if (mainQuest != null) {
             for (String step : mainQuest) {
-                TextView stepTextView = new TextView(this);
-                stepTextView.setText(step);
-                stepTextView.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_secondary_light));
-                stepTextView.setTextSize(16);
-                stepTextView.setPadding(0, 4, 0, 4);
-                mainQuestContent.addView(stepTextView);
+                Button stepButton = new Button(this);
+                stepButton.setText(step);
+                stepButton.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_primary_light));
+                stepButton.setTextSize(16);
+                stepButton.setBackground(getResources().getDrawable(R.drawable.rounded_rectangle_button));
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                params.setMargins(0, 0, 0, 8);
+                stepButton.setLayoutParams(params);
+                mainQuestContent.addView(stepButton);
             }
         }
 
         LinearLayout sideQuestsContent = findViewById(R.id.side_quests_content);
         if (sideQuests != null) {
             for (String quest : sideQuests) {
-                TextView questTextView = new TextView(this);
-                questTextView.setText(quest);
-                questTextView.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_secondary_light));
-                questTextView.setTextSize(16);
-                questTextView.setPadding(0, 4, 0, 4);
-                sideQuestsContent.addView(questTextView);
+                Button questButton = new Button(this);
+                questButton.setText(quest);
+                questButton.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_primary_light));
+                questButton.setTextSize(16);
+                questButton.setBackground(getResources().getDrawable(R.drawable.rounded_rectangle_button));
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                params.setMargins(0, 0, 0, 8);
+                questButton.setLayoutParams(params);
+                sideQuestsContent.addView(questButton);
             }
         }
 
         LinearLayout buildablesContent = findViewById(R.id.buildables_content);
         if (buildables != null) {
             for (String buildable : buildables) {
-                TextView buildableTextView = new TextView(this);
-                buildableTextView.setText(buildable);
-                buildableTextView.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_secondary_light));
-                buildableTextView.setTextSize(16);
-                buildableTextView.setPadding(0, 4, 0, 4);
-                buildablesContent.addView(buildableTextView);
+                Button buildableButton = new Button(this);
+                buildableButton.setText(buildable);
+                buildableButton.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_primary_light));
+                buildableButton.setTextSize(16);
+                buildableButton.setBackground(getResources().getDrawable(R.drawable.rounded_rectangle_button));
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                params.setMargins(0, 0, 0, 8);
+                buildableButton.setLayoutParams(params);
+                buildablesContent.addView(buildableButton);
             }
         }
     }

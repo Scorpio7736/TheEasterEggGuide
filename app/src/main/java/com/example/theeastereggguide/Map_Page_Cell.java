@@ -29,15 +29,12 @@ public class Map_Page_Cell {
         ImageView mapCoverImageView = cellView.findViewById(R.id.map_cover_image);
 
         // Set the data
-        mapNameTextView.setText(map.toString());
-
-        // TODO: Set the cover image for the map from the drawable folder you created.
-        // You will need a way to map the enum to a drawable resource name.
+        Map_OBJECT mapData = mapsObjectHandler.getMapObject(map);
+        mapNameTextView.setText(mapData.getMapName());
+        mapCoverImageView.setImageResource(mapData.getMapIcon());
 
         cellView.setOnClickListener(v -> {
             Intent intent = new Intent(context, MAPPEGG_PAGE.class);
-
-            Map_OBJECT mapData = mapsObjectHandler.getMapObject(map);
 
             intent.putExtra("mapName", mapData.getMapName());
             intent.putExtra("mainQuest", mapData.getMainQuest());
