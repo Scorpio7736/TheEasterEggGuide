@@ -130,6 +130,10 @@ public class PROFILE_PAGE extends AppCompatActivity {
                 startActivity(new Intent(PROFILE_PAGE.this, SETTINGS_PAGE.class));
                 overridePendingTransition(0, 0);
                 return true;
+            } else if (itemId == R.id.nav_favorites) {
+                startActivity(new Intent(getApplicationContext(), Favorites_PAGE.class));
+                overridePendingTransition(0, 0);
+                return true;
             }
             // nav_profile or nav_favorites fall through (no-op here)
             return false;
@@ -180,9 +184,15 @@ public class PROFILE_PAGE extends AppCompatActivity {
             if (pos >= 0) favoriteMapSpinner.setSelection(pos);
         }
 
-        if (imageUri != null) {
-            Uri uri = Uri.parse(imageUri);
-            profileImage.setImageURI(uri);
+        if (imageUri != null && !imageUri.isEmpty()) {
+            try {
+                Uri uri = Uri.parse(imageUri);
+                profileImage.setImageURI(uri);
+            } catch (Exception e) {
+                profileImage.setImageResource(R.drawable.zombierichtofen_bk);
+            }
+        } else {
+            profileImage.setImageResource(R.drawable.zombierichtofen_bk);
         }
     }
 

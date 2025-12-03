@@ -1,28 +1,20 @@
 package com.example.theeastereggguide;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class HOME_PAGE extends AppCompatActivity {
+public class Favorites_PAGE extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
+        setContentView(R.layout.favorites_page);
 
-        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
-        boolean firstStart = prefs.getBoolean("firstStart", true);
-
-        if (firstStart) {
-            showFirstTimeDialog();
-        }
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setItemIconTintList(null);
-        bottomNavigationView.setSelectedItemId(R.id.nav_home);
+        bottomNavigationView.setSelectedItemId(R.id.nav_favorites);
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
@@ -38,26 +30,12 @@ public class HOME_PAGE extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), PROFILE_PAGE.class));
                 overridePendingTransition(0, 0);
                 return true;
-            } else if (itemId == R.id.nav_favorites) {
-                startActivity(new Intent(getApplicationContext(), Favorites_PAGE.class));
+            } else if (itemId == R.id.nav_home) {
+                startActivity(new Intent(getApplicationContext(), HOME_PAGE.class));
                 overridePendingTransition(0, 0);
                 return true;
             }
             return false;
         });
-    }
-
-    private void showFirstTimeDialog() {
-        new AlertDialog.Builder(this)
-                .setTitle("Welcome!")
-                .setMessage("Welcome to the Easter Egg Guide")
-                .setPositiveButton("OK", (dialog, which) -> {
-                    SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
-                    SharedPreferences.Editor editor = prefs.edit();
-                    editor.putBoolean("firstStart", false);
-                    editor.apply();
-                    dialog.dismiss();
-                })
-                .create().show();
     }
 }

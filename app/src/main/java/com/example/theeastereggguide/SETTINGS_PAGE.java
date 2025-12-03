@@ -43,6 +43,10 @@ public class SETTINGS_PAGE extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), PROFILE_PAGE.class));
                 overridePendingTransition(0, 0);
                 return true;
+            } else if (itemId == R.id.nav_favorites) {
+                startActivity(new Intent(getApplicationContext(), Favorites_PAGE.class));
+                overridePendingTransition(0, 0);
+                return true;
             }
             return false;
         });
