@@ -1,10 +1,15 @@
 package com.example.theeastereggguide;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
@@ -32,6 +37,7 @@ public class HOME_PAGE extends AppCompatActivity {
         }
 
         viewPager2 = findViewById(R.id.view_pager_slideshow);
+        viewPager2.setUserInputEnabled(false);
 
         List<Integer> imageList = new ArrayList<>();
         imageList.add(R.drawable.slide_bocw);
@@ -43,6 +49,14 @@ public class HOME_PAGE extends AppCompatActivity {
 
         ImageSliderAdapter adapter = new ImageSliderAdapter(imageList);
         viewPager2.setAdapter(adapter);
+
+        viewPager2.setPageTransformer(new ViewPager2.PageTransformer() {
+            @Override
+            public void transformPage(@NonNull View page, float position) {
+                page.setTranslationX(-position * page.getWidth());
+                page.setAlpha(1 - Math.abs(position));
+            }
+        });
 
         viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
@@ -86,11 +100,32 @@ public class HOME_PAGE extends AppCompatActivity {
             if (viewPager2.getAdapter() != null) {
                 int currentItem = viewPager2.getCurrentItem();
                 int itemCount = viewPager2.getAdapter().getItemCount();
+                int nextItem;
                 if (currentItem < itemCount - 1) {
-                    viewPager2.setCurrentItem(currentItem + 1);
+                    nextItem = currentItem + 1;
                 } else {
-                    viewPager2.setCurrentItem(0);
+                    nextItem = 0;
                 }
+
+                ValueAnimator animator = ValueAnimator.ofInt(0, viewPager2.getWidth());
+                animator.setDuration(500); // DELAY FOR FADE TIMING
+
+                final int[] lastDragPosition = {0};
+                viewPager2.beginFakeDrag();
+                animator.addUpdateListener(valueAnimator -> {
+                    int dragPosition = (int) valueAnimator.getAnimatedValue();
+                    int delta = dragPosition - lastDragPosition[0];
+                    viewPager2.fakeDragBy(-delta);
+                    lastDragPosition[0] = dragPosition;
+                });
+                animator.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        viewPager2.endFakeDrag();
+                        viewPager2.setCurrentItem(nextItem, false);
+                    }
+                });
+                animator.start();
             }
         }
     };
