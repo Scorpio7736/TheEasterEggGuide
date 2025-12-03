@@ -211,7 +211,7 @@ public class Maps_OBJECT_HANDLER
                 Enums.COD_MAP.TRANZIT,
                 new Map_OBJECT(
                         Enums.COD_MAP.TRANZIT.toString(),
-                        R.drawable.zombierichtofen_bk,
+                        R.drawable.tranzit_boii,
                         new ArrayList<>(Collections.singletonList(
                                 "Tower of Babble Main Quest"
                         )),
@@ -236,7 +236,7 @@ public class Maps_OBJECT_HANDLER
                 Enums.COD_MAP.TOWN,
                 new Map_OBJECT(
                         Enums.COD_MAP.TOWN.toString(),
-                        R.drawable.zombierichtofen_bk,
+                        R.drawable.town_boii,
                         new ArrayList<>(Collections.singletonList("None")),
                         new ArrayList<>(Arrays.asList(
                                 "Song - Carrion (shared with TranZit)",
@@ -254,7 +254,7 @@ public class Maps_OBJECT_HANDLER
                 Enums.COD_MAP.FARM,
                 new Map_OBJECT(
                         Enums.COD_MAP.FARM.toString(),
-                        R.drawable.zombierichtofen_bk,
+                        R.drawable.farm_boii,
                         new ArrayList<>(Collections.singletonList("None")),
                         new ArrayList<>(Arrays.asList(
                                 "Song - Carrion (shared)",
@@ -271,7 +271,7 @@ public class Maps_OBJECT_HANDLER
                 Enums.COD_MAP.BUS_DEPOT,
                 new Map_OBJECT(
                         Enums.COD_MAP.BUS_DEPOT.toString(),
-                        R.drawable.zombierichtofen_bk,
+                        R.drawable.busdepot_boii,
                         new ArrayList<>(Collections.singletonList("None")),
                         new ArrayList<>(Arrays.asList(
                                 "Song - Carrion (shared)",
@@ -288,7 +288,7 @@ public class Maps_OBJECT_HANDLER
                 Enums.COD_MAP.NUKETOWN_ZOMBIES,
                 new Map_OBJECT(
                         Enums.COD_MAP.NUKETOWN_ZOMBIES.toString(),
-                        R.drawable.zombierichtofen_bk,
+                        R.drawable.nuketown_boii,
                         new ArrayList<>(Collections.singletonList("None")),
                         new ArrayList<>(Arrays.asList(
                                 "Song - She’s Not There",
@@ -308,7 +308,7 @@ public class Maps_OBJECT_HANDLER
                 Enums.COD_MAP.DIE_RISE,
                 new Map_OBJECT(
                         Enums.COD_MAP.DIE_RISE.toString(),
-                        R.drawable.zombierichtofen_bk,
+                        R.drawable.dierise_boii,
                         new ArrayList<>(Collections.singletonList(
                                 "High Maintenance Main Quest"
                         )),
@@ -331,7 +331,7 @@ public class Maps_OBJECT_HANDLER
                 Enums.COD_MAP.MOB_OF_THE_DEAD,
                 new Map_OBJECT(
                         Enums.COD_MAP.MOB_OF_THE_DEAD.toString(),
-                        R.drawable.zombierichtofen_bk,
+                        R.drawable.motd_boii,
                         new ArrayList<>(Collections.singletonList(
                                 "Pop Goes the Weasel Main Quest"
                         )),
@@ -355,7 +355,7 @@ public class Maps_OBJECT_HANDLER
                 Enums.COD_MAP.BURIED,
                 new Map_OBJECT(
                         Enums.COD_MAP.BURIED.toString(),
-                        R.drawable.zombierichtofen_bk,
+                        R.drawable.buried_boii,
                         new ArrayList<>(Collections.singletonList(
                                 "Mined Games Main Quest"
                         )),
@@ -380,7 +380,7 @@ public class Maps_OBJECT_HANDLER
                 Enums.COD_MAP.ORIGINS,
                 new Map_OBJECT(
                         Enums.COD_MAP.ORIGINS.toString(),
-                        R.drawable.zombierichtofen_bk,
+                        R.drawable.origins_boii,
                         new ArrayList<>(Collections.singletonList(
                                 "Little Lost Girl Main Quest"
                         )),
@@ -407,7 +407,7 @@ public class Maps_OBJECT_HANDLER
                 Enums.COD_MAP.SHADOWS_OF_EVIL,
                 new Map_OBJECT(
                         Enums.COD_MAP.SHADOWS_OF_EVIL.toString(),
-                        R.drawable.zombierichtofen_bk,
+                        R.drawable.soe_boiii,
                         new ArrayList<>(Arrays.asList(
                                 "Main Quest - Sacrifice Rituals and Gateworms",
                                 "Summoning the Apothicon and Shadowman Boss Fight"
@@ -433,7 +433,7 @@ public class Maps_OBJECT_HANDLER
                 Enums.COD_MAP.THE_GIANT,
                 new Map_OBJECT(
                         Enums.COD_MAP.THE_GIANT.toString(),
-                        R.drawable.zombierichtofen_bk,
+                        R.drawable.thegiant_boiii,
                         new ArrayList<>(Collections.singletonList(
                                 "Hidden Beacon Main Quest (Annihilator / Teleporter Panel Step)"
                         )),
@@ -456,7 +456,7 @@ public class Maps_OBJECT_HANDLER
                 Enums.COD_MAP.DER_EISENDRACHE,
                 new Map_OBJECT(
                         Enums.COD_MAP.DER_EISENDRACHE.toString(),
-                        R.drawable.zombierichtofen_bk,
+                        R.drawable.de_boiii,
                         new ArrayList<>(Arrays.asList(
                                 "My Brother's Keeper Main Quest",
                                 "Keeper Boss Fight and Moon Destruction"
@@ -482,7 +482,7 @@ public class Maps_OBJECT_HANDLER
                 Enums.COD_MAP.ZETSUBOU_NO_SHIMA,
                 new Map_OBJECT(
                         Enums.COD_MAP.ZETSUBOU_NO_SHIMA.toString(),
-                        R.drawable.zombierichtofen_bk,
+                        R.drawable.zetsubounoshima_boiii,
                         new ArrayList<>(Arrays.asList(
                                 "Seeds of Doubt / Division 9 Main Quest",
                                 "Takeo's Ending and Spider Boss Fight"
@@ -508,7 +508,7 @@ public class Maps_OBJECT_HANDLER
                 Enums.COD_MAP.GOROD_KROVI,
                 new Map_OBJECT(
                         Enums.COD_MAP.GOROD_KROVI.toString(),
-                        R.drawable.zombierichtofen_bk,
+                        R.drawable.gorodkrovi_boiii,
                         new ArrayList<>(Arrays.asList(
                                 "Love and War / Dragon Control Main Quest",
                                 "Nikolai 1.0 Boss Fight"
@@ -534,7 +534,7 @@ public class Maps_OBJECT_HANDLER
                 Enums.COD_MAP.REVELATIONS,
                 new Map_OBJECT(
                         Enums.COD_MAP.REVELATIONS.toString(),
-                        R.drawable.zombierichtofen_bk,
+                        R.drawable.revelations_boiii,
                         new ArrayList<>(Arrays.asList(
                                 "A Better Tomorrow Main Quest",
                                 "Apothicon Interior and Shadowman Boss Fight"
@@ -555,6 +555,206 @@ public class Maps_OBJECT_HANDLER
                         ))
                 )
         );
+
+        mapObjects.put(
+                Enums.COD_MAP.NACHT_DER_UNTOTEN_ZC,
+                new Map_OBJECT(
+                        Enums.COD_MAP.NACHT_DER_UNTOTEN_ZC.toString(),
+                        R.drawable.nacht_boiii,
+                        new ArrayList<>(Arrays.asList(
+                                "No Main Quest (Survival Map)"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "Song - Undone",
+                                "Musical EE (3 Radios)",
+                                "Rebuild Boards for Power-Ups"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "GobbleGums Added (ZC)",
+                                "Wonderfizz Machine",
+                                "Classic Mystery Box"
+                        ))
+                )
+        );
+
+        mapObjects.put(
+                Enums.COD_MAP.VERRUCKT_ZC,
+                new Map_OBJECT(
+                        Enums.COD_MAP.VERRUCKT_ZC.toString(),
+                        R.drawable.verruckt_boiii,
+                        new ArrayList<>(Arrays.asList(
+                                "No Main Quest (Survival Map)"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "Song - Lullaby for a Deadman",
+                                "Easter Egg Radios",
+                                "Power Switch Door Link"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "Wonderfizz Machine",
+                                "Traps",
+                                "HVK Wallbuy Added (ZC)"
+                        ))
+                )
+        );
+
+        mapObjects.put(
+                Enums.COD_MAP.SHI_NO_NUMA_ZC,
+                new Map_OBJECT(
+                        Enums.COD_MAP.SHI_NO_NUMA_ZC.toString(),
+                        R.drawable.shinonuma_boiii,
+                        new ArrayList<>(Arrays.asList(
+                                "No Main Quest (Survival Flow)"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "Song - The One",
+                                "115 Rock EE",
+                                "Flogger Trap EE"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "Wonderfizz Machine",
+                                "Random Perk Huts",
+                                "Flogger Trap"
+                        ))
+                )
+        );
+
+        mapObjects.put(
+                Enums.COD_MAP.KINO_DER_TOTEN_ZC,
+                new Map_OBJECT(
+                        Enums.COD_MAP.KINO_DER_TOTEN_ZC.toString(),
+                        R.drawable.kinodertoten_boiii,
+                        new ArrayList<>(Arrays.asList(
+                                "No Main Quest (Story Ties in ZC)"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "Song - 115",
+                                "Reel Projector EE",
+                                "Shootable Power-Up EE"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "Buildable Shield (ZC)",
+                                "Teleporter Pads",
+                                "Trap Circuit"
+                        ))
+                )
+        );
+
+        mapObjects.put(
+                Enums.COD_MAP.ASCENSION_ZC,
+                new Map_OBJECT(
+                        Enums.COD_MAP.ASCENSION_ZC.toString(),
+                        R.drawable.ascension_boiii,
+                        new ArrayList<>(Arrays.asList(
+                                "Main Quest (Launch Rocket & Gersh EE)"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "Song - Pareidolia",
+                                "Gersh Devices",
+                                "Monkey Round EE"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "Matryoshka Dolls",
+                                "Lunar Lander System",
+                                "Launch Pad Power"
+                        ))
+                )
+        );
+
+        mapObjects.put(
+                Enums.COD_MAP.SHANGRI_LA_ZC,
+                new Map_OBJECT(
+                        Enums.COD_MAP.SHANGRI_LA_ZC.toString(),
+                        R.drawable.shangrila_boiii,
+                        new ArrayList<>(Arrays.asList(
+                                "Time Travel Will Tell Main Quest"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "Song - Pareidolia",
+                                "Focusing Stone EE",
+                                "Napalm & Shriekers"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "31-79 JGb215 (Baby Gun)",
+                                "Water Slide",
+                                "Minecart System"
+                        ))
+                )
+        );
+
+        mapObjects.put(
+                Enums.COD_MAP.MOON_ZC,
+                new Map_OBJECT(
+                        Enums.COD_MAP.MOON_ZC.toString(),
+                        R.drawable.moon_boiii,
+                        new ArrayList<>(Arrays.asList(
+                                "Richtofen's Grand Scheme Main Quest"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "Song - Coming Home",
+                                "Hacker EE",
+                                "Maxis Side Steps"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "Wave Gun / Zap Guns",
+                                "QED & Gersh Devices",
+                                "Low Gravity Mechanics"
+                        ))
+                )
+        );
+
+        mapObjects.put(
+                Enums.COD_MAP.ORIGINS_ZC,
+                new Map_OBJECT(
+                        Enums.COD_MAP.ORIGINS_ZC.toString(),
+                        R.drawable.origins_boii,
+                        new ArrayList<>(Arrays.asList(
+                                "Little Lost Girl Main Quest",
+                                "Free Samantha and Complete the Final Ritual"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "Song - Archangel",
+                                "Elemental Staff Upgrade Quests",
+                                "Challenge Chest Rewards",
+                                "Giant Robots Head EE",
+                                "Maxis Drone Parts & Side EE"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "Elemental Staffs (Fire, Ice, Lightning, Wind)",
+                                "Maxis Drone",
+                                "One Inch Punch / Iron Fists",
+                                "Shield Buildable",
+                                "Tank Path Access to Parts"
+                        ))
+                )
+        );
+
+        mapObjects.put(
+                Enums.COD_MAP.DEAD_OPS_ARCADE_2,
+                new Map_OBJECT(
+                        Enums.COD_MAP.DEAD_OPS_ARCADE_2.toString(),
+                        R.drawable.deadopsarcade_boiii,
+                        new ArrayList<>(Arrays.asList(
+                                "Cosmic Silverback Main Quest",
+                                "Escape the Island and Complete All Arenas"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "Hidden Room EE",
+                                "Fate & Fortune System",
+                                "Boss Wave Challenges",
+                                "8-Bit Retro Arcade Room",
+                                "First Person Mode Power-Up"
+                        )),
+                        new ArrayList<>(Arrays.asList(
+                                "Upgradable Weapons",
+                                "Vehicle Power-Ups (Tank, Mech, Dragon)",
+                                "Gem & Treasure System",
+                                "Arena Progression Path",
+                                "Friendship Bear Mechanic"
+                        ))
+                )
+        );
+
 
 
 

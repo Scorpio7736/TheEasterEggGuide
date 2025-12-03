@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">The Easter Egg Guide</string>
+    <string name="profile_name_hint">Name</string>
+    <string name="profile_birthday_header">Birthday</string>
+    <string name="profile_select_birthday">Select Birthday</string>
+    <string name="profile_gender_header">Gender</string>
+    <string name="profile_favorite_map_header">Favorite Map</string>
+    <string name="profile_about_me_hint">About Me</string>
+    <string name="profile_save_button">Save</string>
 </resources>

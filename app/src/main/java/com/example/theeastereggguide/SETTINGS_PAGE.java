@@ -39,6 +39,10 @@ public class SETTINGS_PAGE extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), MAPS_PAGE.class));
                 overridePendingTransition(0, 0);
                 return true;
+            } else if (itemId == R.id.nav_profile) {
+                startActivity(new Intent(getApplicationContext(), PROFILE_PAGE.class));
+                overridePendingTransition(0, 0);
+                return true;
             }
             return false;
         });
