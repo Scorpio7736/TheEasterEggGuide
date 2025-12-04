@@ -52,7 +52,9 @@ public class PROFILE_PAGE extends AppCompatActivity {
         Button saveButton = findViewById(R.id.save_button);
 
         profileImage.setOnClickListener(v -> {
-            Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            Intent galleryIntent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+            galleryIntent.addCategory(Intent.CATEGORY_OPENABLE);
+            galleryIntent.setType("image/*");
             startActivityForResult(galleryIntent, RESULT_LOAD_IMAGE);
         });
 
@@ -131,10 +133,17 @@ public class PROFILE_PAGE extends AppCompatActivity {
             if (imageUriString != null) {
                 profileImage.setImageURI(Uri.parse(imageUriString));
             }
-        } catch (ClassCastException e) {
-            Log.e("PROFILE_PAGE", "Error loading data from SharedPreferences", e);
-            // Clear the corrupted preferences to prevent future crashes
+        } catch (Exception e) { // Catch all exceptions for robustness
+            Log.e("PROFILE_PAGE", "Error loading data from SharedPreferences. Resetting profile data.", e);
+            // Clear corrupted preferences to prevent future crashes
             sharedPreferences.edit().clear().apply();
+            // Reset the UI to its default state
+            nameEditText.setText("");
+            birthdayText.setText("Select Birthday");
+            genderSpinner.setSelection(0);
+            favoriteMapSpinner.setSelection(0);
+            aboutMeEditText.setText("");
+            profileImage.setImageResource(R.drawable.profile_icon); // Set a default image
             // Optionally, inform the user that their data was reset
             Toast.makeText(this, "Profile data was corrupted and has been reset.", Toast.LENGTH_LONG).show();
         }
@@ -145,6 +154,9 @@ public class PROFILE_PAGE extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && null != data) {
             Uri selectedImage = data.getData();
+            final int takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION;
+            // You only need to take permission once, and this will persist
+            getContentResolver().takePersistableUriPermission(selectedImage, takeFlags);
             profileImage.setImageURI(selectedImage);
 
             SharedPreferences.Editor editor = sharedPreferences.edit();
