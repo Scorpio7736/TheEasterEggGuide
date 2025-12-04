@@ -21,27 +21,41 @@
             android:layout_height="wrap_content"
             android:padding="16dp">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_image"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                app:civ_border_width="2dp"
-                app:civ_border_color="@color/CUSTOM_ITEM_text_primary_light"
+            <FrameLayout
+                android:id="@+id/profile_image_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/profile_icon"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/CUSTOM_ITEM_text_primary_light" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom|end"
+                    android:src="@drawable/ic_camera_edit"
+                    android:background="@drawable/camera_icon_background" 
+                    android:padding="4dp"/>
+
+            </FrameLayout>
 
             <EditText
                 android:id="@+id/name_edittext"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:hint="@string/profile_name_hint"
+                android:hint="Name"
                 android:textColor="@color/CUSTOM_ITEM_text_primary_light"
                 android:textColorHint="@color/CUSTOM_ITEM_text_secondary_light"
-                android:autofillHints="name"
-                android:inputType="textPersonName"
-                app:layout_constraintTop_toBottomOf="@+id/profile_image"
+                app:layout_constraintTop_toBottomOf="@+id/profile_image_layout"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
@@ -50,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/profile_birthday_header"
+                android:text="Birthday"
                 android:textColor="@color/CUSTOM_ITEM_text_secondary_light"
                 app:layout_constraintTop_toBottomOf="@+id/name_edittext"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -59,7 +73,7 @@
                 android:id="@+id/birthday_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/profile_select_birthday"
+                android:text="Select Birthday"
                 android:textSize="18sp"
                 android:padding="8dp"
                 android:textColor="@color/CUSTOM_ITEM_text_primary_light"
@@ -72,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/profile_gender_header"
+                android:text="Gender"
                 android:textColor="@color/CUSTOM_ITEM_text_secondary_light"
                 app:layout_constraintTop_toBottomOf="@+id/birthday_text"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -90,7 +104,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/profile_favorite_map_header"
+                android:text="Favorite Map"
                 android:textColor="@color/CUSTOM_ITEM_text_secondary_light"
                 app:layout_constraintTop_toBottomOf="@+id/gender_spinner"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -108,13 +122,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:hint="@string/profile_about_me_hint"
+                android:hint="About Me"
                 android:minLines="3"
                 android:gravity="top"
                 android:textColor="@color/CUSTOM_ITEM_text_primary_light"
                 android:textColorHint="@color/CUSTOM_ITEM_text_secondary_light"
-                android:autofillHints="biography"
-                android:inputType="textMultiLine"
                 app:layout_constraintTop_toBottomOf="@+id/favorite_map_spinner"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
@@ -124,7 +136,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="@string/profile_save_button"
+                android:text="Save"
                 app:layout_constraintTop_toBottomOf="@+id/about_me_edittext"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
