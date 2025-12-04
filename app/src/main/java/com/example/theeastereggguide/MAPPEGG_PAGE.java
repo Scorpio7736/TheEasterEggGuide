@@ -2,6 +2,7 @@ package com.example.theeastereggguide;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -26,47 +27,71 @@ public class MAPPEGG_PAGE extends AppCompatActivity {
         titleText.setText(mapName);
 
         LinearLayout mainQuestContent = findViewById(R.id.main_quest_content);
-        if (mainQuest != null) {
-            for (String step : mainQuest) {
-                Button stepButton = new Button(this);
-                stepButton.setText(step);
-                stepButton.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_primary_light));
-                stepButton.setTextSize(16);
-                stepButton.setBackground(getResources().getDrawable(R.drawable.rounded_rectangle_button));
-                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                params.setMargins(0, 0, 0, 8);
-                stepButton.setLayoutParams(params);
-                mainQuestContent.addView(stepButton);
-            }
-        }
+        populateExpandableList(mainQuestContent, mainQuest);
 
         LinearLayout sideQuestsContent = findViewById(R.id.side_quests_content);
-        if (sideQuests != null) {
-            for (String quest : sideQuests) {
-                Button questButton = new Button(this);
-                questButton.setText(quest);
-                questButton.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_primary_light));
-                questButton.setTextSize(16);
-                questButton.setBackground(getResources().getDrawable(R.drawable.rounded_rectangle_button));
-                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                params.setMargins(0, 0, 0, 8);
-                questButton.setLayoutParams(params);
-                sideQuestsContent.addView(questButton);
-            }
-        }
+        populateExpandableList(sideQuestsContent, sideQuests);
 
         LinearLayout buildablesContent = findViewById(R.id.buildables_content);
-        if (buildables != null) {
-            for (String buildable : buildables) {
-                Button buildableButton = new Button(this);
-                buildableButton.setText(buildable);
-                buildableButton.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_primary_light));
-                buildableButton.setTextSize(16);
-                buildableButton.setBackground(getResources().getDrawable(R.drawable.rounded_rectangle_button));
-                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                params.setMargins(0, 0, 0, 8);
-                buildableButton.setLayoutParams(params);
-                buildablesContent.addView(buildableButton);
+        populateExpandableList(buildablesContent, buildables);
+    }
+
+    private void populateExpandableList(LinearLayout container, ArrayList<String> items) {
+        if (items != null) {
+            for (String itemText : items) {
+                // Create item container
+                LinearLayout itemContainer = new LinearLayout(this);
+                itemContainer.setOrientation(LinearLayout.VERTICAL);
+                LinearLayout.LayoutParams itemContainerParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                itemContainerParams.setMargins(0, 0, 0, 8); // This margin separates the expandable items
+                itemContainer.setLayoutParams(itemContainerParams);
+
+                // Create the button
+                Button itemButton = new Button(this);
+                itemButton.setText(itemText);
+                itemButton.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_primary_light));
+                itemButton.setTextSize(16);
+                itemButton.setBackground(getResources().getDrawable(R.drawable.rounded_rectangle_button));
+                LinearLayout.LayoutParams buttonParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                itemButton.setLayoutParams(buttonParams);
+
+                // Create steps container
+                LinearLayout stepsContainer = new LinearLayout(this);
+                stepsContainer.setOrientation(LinearLayout.VERTICAL);
+                stepsContainer.setVisibility(View.GONE); // Initially hidden
+                LinearLayout.LayoutParams stepsParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                stepsParams.setMargins(32, 8, 16, 8); // Indent steps, add some margin top.
+                stepsContainer.setLayoutParams(stepsParams);
+
+                // Add steps to stepsContainer
+                TextView startStep = new TextView(this);
+                startStep.setText("1. Start");
+                startStep.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_primary_light));
+                stepsContainer.addView(startStep);
+
+                TextView middleStep = new TextView(this);
+                middleStep.setText("2. Middle");
+                middleStep.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_primary_light));
+                stepsContainer.addView(middleStep);
+
+                TextView endStep = new TextView(this);
+                endStep.setText("3. End");
+                endStep.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_primary_light));
+                stepsContainer.addView(endStep);
+
+                // Set OnClickListener
+                itemButton.setOnClickListener(v -> {
+                    if (stepsContainer.getVisibility() == View.VISIBLE) {
+                        stepsContainer.setVisibility(View.GONE);
+                    } else {
+                        stepsContainer.setVisibility(View.VISIBLE);
+                    }
+                });
+
+                itemContainer.addView(itemButton);
+                itemContainer.addView(stepsContainer);
+
+                container.addView(itemContainer);
             }
         }
     }
