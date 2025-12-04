@@ -1,7 +1,6 @@
 package com.example.theeastereggguide;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,7 +18,9 @@ public class Maps_OBJECT_HANDLER {
 
         for (Enums.COD_MAP map : Enums.COD_MAP.values()) {
             if (!mapObjects.containsKey(map)) {
-                mapObjects.put(map, new Map_OBJECT(map.toString(), R.drawable.zombierichtofen_bk, new ArrayList<>(Collections.singletonList("None")), new ArrayList<>(), new ArrayList<>()));
+                ArrayList<ExpandableItem> defaultMainQuest = new ArrayList<>();
+                defaultMainQuest.add(new ExpandableItem("None", new ArrayList<>()));
+                mapObjects.put(map, new Map_OBJECT(map.toString(), R.drawable.zombierichtofen_bk, defaultMainQuest, new ArrayList<>(), new ArrayList<>()));
             }
         }
     }

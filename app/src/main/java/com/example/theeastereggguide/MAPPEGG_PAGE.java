@@ -19,9 +19,9 @@ public class MAPPEGG_PAGE extends AppCompatActivity {
 
         Intent intent = getIntent();
         String mapName = intent.getStringExtra("mapName");
-        ArrayList<String> mainQuest = (ArrayList<String>) intent.getSerializableExtra("mainQuest");
-        ArrayList<String> sideQuests = (ArrayList<String>) intent.getSerializableExtra("sideQuests");
-        ArrayList<String> buildables = (ArrayList<String>) intent.getSerializableExtra("buildables");
+        ArrayList<ExpandableItem> mainQuest = (ArrayList<ExpandableItem>) intent.getSerializableExtra("mainQuest");
+        ArrayList<ExpandableItem> sideQuests = (ArrayList<ExpandableItem>) intent.getSerializableExtra("sideQuests");
+        ArrayList<ExpandableItem> buildables = (ArrayList<ExpandableItem>) intent.getSerializableExtra("buildables");
 
         TextView titleText = findViewById(R.id.title_text);
         titleText.setText(mapName);
@@ -36,50 +36,40 @@ public class MAPPEGG_PAGE extends AppCompatActivity {
         populateExpandableList(buildablesContent, buildables);
     }
 
-    private void populateExpandableList(LinearLayout container, ArrayList<String> items) {
+    private void populateExpandableList(LinearLayout container, ArrayList<ExpandableItem> items) {
         if (items != null) {
-            for (String itemText : items) {
-                // Create item container
+            for (ExpandableItem item : items) {
                 LinearLayout itemContainer = new LinearLayout(this);
                 itemContainer.setOrientation(LinearLayout.VERTICAL);
                 LinearLayout.LayoutParams itemContainerParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                itemContainerParams.setMargins(0, 0, 0, 8); // This margin separates the expandable items
+                itemContainerParams.setMargins(0, 0, 0, 8);
                 itemContainer.setLayoutParams(itemContainerParams);
 
-                // Create the button
                 Button itemButton = new Button(this);
-                itemButton.setText(itemText);
+                itemButton.setText(item.getName());
                 itemButton.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_primary_light));
                 itemButton.setTextSize(16);
                 itemButton.setBackground(getResources().getDrawable(R.drawable.rounded_rectangle_button));
                 LinearLayout.LayoutParams buttonParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
                 itemButton.setLayoutParams(buttonParams);
 
-                // Create steps container
                 LinearLayout stepsContainer = new LinearLayout(this);
                 stepsContainer.setOrientation(LinearLayout.VERTICAL);
-                stepsContainer.setVisibility(View.GONE); // Initially hidden
+                stepsContainer.setVisibility(View.GONE);
                 LinearLayout.LayoutParams stepsParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                stepsParams.setMargins(32, 8, 16, 8); // Indent steps, add some margin top.
+                stepsParams.setMargins(32, 8, 16, 8);
                 stepsContainer.setLayoutParams(stepsParams);
 
-                // Add steps to stepsContainer
-                TextView startStep = new TextView(this);
-                startStep.setText("1. Start");
-                startStep.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_primary_light));
-                stepsContainer.addView(startStep);
+                ArrayList<String> steps = item.getSteps();
+                if (steps != null && !steps.isEmpty()) {
+                    for (int i = 0; i < steps.size(); i++) {
+                        TextView stepView = new TextView(this);
+                        stepView.setText((i + 1) + ". " + steps.get(i));
+                        stepView.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_primary_light));
+                        stepsContainer.addView(stepView);
+                    }
+                }
 
-                TextView middleStep = new TextView(this);
-                middleStep.setText("2. Middle");
-                middleStep.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_primary_light));
-                stepsContainer.addView(middleStep);
-
-                TextView endStep = new TextView(this);
-                endStep.setText("3. End");
-                endStep.setTextColor(getResources().getColor(R.color.CUSTOM_ITEM_text_primary_light));
-                stepsContainer.addView(endStep);
-
-                // Set OnClickListener
                 itemButton.setOnClickListener(v -> {
                     if (stepsContainer.getVisibility() == View.VISIBLE) {
                         stepsContainer.setVisibility(View.GONE);

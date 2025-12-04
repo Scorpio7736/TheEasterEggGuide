@@ -2,9 +2,11 @@ package com.example.theeastereggguide;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,33 +16,43 @@ public class Map_Page_Cell {
 
     private final Enums.COD_MAP map;
     private final Maps_OBJECT_HANDLER mapsObjectHandler = new Maps_OBJECT_HANDLER();
+    private static final String PREFS_NAME = "Favorites";
 
     public Map_Page_Cell(Enums.COD_MAP map) {
         this.map = map;
     }
 
     public View createView(Context context, ViewGroup parent) {
-        // Inflate the layout for the cell
         LayoutInflater inflater = LayoutInflater.from(context);
         View cellView = inflater.inflate(R.layout.map_cell_layout, parent, false);
 
-        // Get the UI elements
         TextView mapNameTextView = cellView.findViewById(R.id.map_name_text);
         ImageView mapCoverImageView = cellView.findViewById(R.id.map_cover_image);
+        CheckBox favoriteButton = cellView.findViewById(R.id.favorite_button);
 
-        // Set the data
         Map_OBJECT mapData = mapsObjectHandler.getMapObject(map);
         mapNameTextView.setText(mapData.getMapName());
         mapCoverImageView.setImageResource(mapData.getMapIcon());
 
+        // Load favorite state
+        SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        boolean isFavorite = prefs.getBoolean(map.name(), false);
+        mapData.setFavorite(isFavorite);
+        favoriteButton.setChecked(isFavorite);
+
+        favoriteButton.setOnClickListener(v -> {
+            boolean newState = !mapData.isFavorite();
+            mapData.setFavorite(newState);
+            favoriteButton.setChecked(newState);
+            saveFavoriteState(context, map, newState);
+        });
+
         cellView.setOnClickListener(v -> {
             Intent intent = new Intent(context, MAPPEGG_PAGE.class);
-
             intent.putExtra("mapName", mapData.getMapName());
             intent.putExtra("mainQuest", mapData.getMainQuest());
             intent.putExtra("sideQuests", (Serializable) mapData.getSideQuests());
             intent.putExtra("buildables", (Serializable) mapData.getBuildables());
-
             context.startActivity(intent);
         });
 
@@ -49,5 +61,11 @@ public class Map_Page_Cell {
 
     public Enums.COD_MAP getMap() {
         return map;
+    }
+
+    private void saveFavoriteState(Context context, Enums.COD_MAP map, boolean isFavorite) {
+        SharedPreferences.Editor editor = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE).edit();
+        editor.putBoolean(map.name(), isFavorite);
+        editor.apply();
     }
 }
