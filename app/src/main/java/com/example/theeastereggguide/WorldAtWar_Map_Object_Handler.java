@@ -24,8 +24,7 @@ public class WorldAtWar_Map_Object_Handler {
                         R.drawable.nacht_waw,
                         nachtMainQuest,
                         nachtSideQuests,
-                        new ArrayList<>(),
-                        false
+                        new ArrayList<>()
                 ));
 
         mapObjects.put(
@@ -35,8 +34,7 @@ public class WorldAtWar_Map_Object_Handler {
                         R.drawable.verruckt_waw,
                         new ArrayList<>(),
                         new ArrayList<>(),
-                        new ArrayList<>(),
-                        false
+                        new ArrayList<>()
                 )
         );
 
@@ -47,8 +45,7 @@ public class WorldAtWar_Map_Object_Handler {
                         R.drawable.shinonuma_waw,
                         new ArrayList<>(),
                         new ArrayList<>(),
-                        new ArrayList<>(),
-                        false
+                        new ArrayList<>()
                 )
         );
 
@@ -59,8 +56,7 @@ public class WorldAtWar_Map_Object_Handler {
                         R.drawable.derreise_waw,
                         new ArrayList<>(),
                         new ArrayList<>(),
-                        new ArrayList<>(),
-                        false
+                        new ArrayList<>()
                 )
         );
         return mapObjects;

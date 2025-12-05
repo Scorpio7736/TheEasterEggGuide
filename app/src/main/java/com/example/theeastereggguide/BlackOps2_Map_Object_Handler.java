@@ -35,8 +35,7 @@ public class BlackOps2_Map_Object_Handler {
                         R.drawable.tranzit_boii,
                         tranzitMainQuest,
                         tranzitSideQuests,
-                        tranzitBuildables,
-                        false
+                        tranzitBuildables
                 )
         );
 
@@ -56,8 +55,7 @@ public class BlackOps2_Map_Object_Handler {
                         R.drawable.town_boii,
                         new ArrayList<>(),
                         townSideQuests,
-                        townBuildables,
-                        false
+                        townBuildables
                 )
         );
 
@@ -76,8 +74,7 @@ public class BlackOps2_Map_Object_Handler {
                         R.drawable.farm_boii,
                         new ArrayList<>(),
                         farmSideQuests,
-                        farmBuildables,
-                        false
+                        farmBuildables
                 )
         );
 
@@ -96,8 +93,7 @@ public class BlackOps2_Map_Object_Handler {
                         R.drawable.busdepot_boii,
                         new ArrayList<>(),
                         busDepotSideQuests,
-                        busDepotBuildables,
-                        false
+                        busDepotBuildables
                 )
         );
 
@@ -119,8 +115,7 @@ public class BlackOps2_Map_Object_Handler {
                         R.drawable.nuketown_boii,
                         new ArrayList<>(),
                         nuketownSideQuests,
-                        nuketownBuildables,
-                        false
+                        nuketownBuildables
                 )
         );
 
@@ -146,8 +141,7 @@ public class BlackOps2_Map_Object_Handler {
                         R.drawable.dierise_boii,
                         dieRiseMainQuest,
                         dieRiseSideQuests,
-                        dieRiseBuildables,
-                        false
+                        dieRiseBuildables
                 )
         );
 
@@ -174,8 +168,7 @@ public class BlackOps2_Map_Object_Handler {
                         R.drawable.motd_boii,
                         motdMainQuest,
                         motdSideQuests,
-                        motdBuildables,
-                        false
+                        motdBuildables
                 )
         );
 
@@ -203,8 +196,7 @@ public class BlackOps2_Map_Object_Handler {
                         R.drawable.buried_boii,
                         buriedMainQuest,
                         buriedSideQuests,
-                        buriedBuildables,
-                        false
+                        buriedBuildables
                 )
         );
 
@@ -232,8 +224,7 @@ public class BlackOps2_Map_Object_Handler {
                         R.drawable.origins_boii,
                         originsMainQuest,
                         originsSideQuests,
-                        originsBuildables,
-                        false
+                        originsBuildables
                 )
         );
         return mapObjects;

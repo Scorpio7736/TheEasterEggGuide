@@ -26,14 +26,13 @@ public class PROFILE_PAGE extends AppCompatActivity {
     private static final String NAME_KEY = "name";
     private static final String BIRTHDAY_KEY = "birthday";
     private static final String GENDER_KEY = "gender";
-    private static final String MAP_KEY = "map";
     private static final String ABOUT_KEY = "about";
     private static final String IMAGE_URI_KEY = "imageUri";
 
     private CircleImageView profileImage;
     private EditText nameEditText, aboutMeEditText;
     private TextView birthdayText;
-    private Spinner genderSpinner, favoriteMapSpinner;
+    private Spinner genderSpinner;
     private SharedPreferences sharedPreferences;
 
     @Override
@@ -47,7 +46,6 @@ public class PROFILE_PAGE extends AppCompatActivity {
         nameEditText = findViewById(R.id.name_edittext);
         birthdayText = findViewById(R.id.birthday_text);
         genderSpinner = findViewById(R.id.gender_spinner);
-        favoriteMapSpinner = findViewById(R.id.favorite_map_spinner);
         aboutMeEditText = findViewById(R.id.about_me_edittext);
         Button saveButton = findViewById(R.id.save_button);
 
@@ -78,12 +76,6 @@ public class PROFILE_PAGE extends AppCompatActivity {
         genderAdapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         genderSpinner.setAdapter(genderAdapter);
 
-        // Favorite Map Spinner
-        ArrayAdapter<CharSequence> mapAdapter = ArrayAdapter.createFromResource(this,
-                R.array.cod_maps, R.layout.custom_spinner_item);
-        mapAdapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
-        favoriteMapSpinner.setAdapter(mapAdapter);
-
         loadData();
 
         // --- Navigation --- //
@@ -105,6 +97,10 @@ public class PROFILE_PAGE extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), SETTINGS_PAGE.class));
                 overridePendingTransition(0, 0);
                 return true;
+            } else if (itemId == R.id.nav_favorites) {
+                startActivity(new Intent(getApplicationContext(), Favorites_PAGE.class));
+                overridePendingTransition(0, 0);
+                return true;
             }
             return false;
         });
@@ -115,7 +111,6 @@ public class PROFILE_PAGE extends AppCompatActivity {
         editor.putString(NAME_KEY, nameEditText.getText().toString());
         editor.putString(BIRTHDAY_KEY, birthdayText.getText().toString());
         editor.putInt(GENDER_KEY, genderSpinner.getSelectedItemPosition());
-        editor.putInt(MAP_KEY, favoriteMapSpinner.getSelectedItemPosition());
         editor.putString(ABOUT_KEY, aboutMeEditText.getText().toString());
         editor.apply();
         Toast.makeText(this, "Profile Saved!", Toast.LENGTH_SHORT).show();
@@ -126,7 +121,6 @@ public class PROFILE_PAGE extends AppCompatActivity {
             nameEditText.setText(sharedPreferences.getString(NAME_KEY, ""));
             birthdayText.setText(sharedPreferences.getString(BIRTHDAY_KEY, "Select Birthday"));
             genderSpinner.setSelection(sharedPreferences.getInt(GENDER_KEY, 0));
-            favoriteMapSpinner.setSelection(sharedPreferences.getInt(MAP_KEY, 0));
             aboutMeEditText.setText(sharedPreferences.getString(ABOUT_KEY, ""));
 
             String imageUriString = sharedPreferences.getString(IMAGE_URI_KEY, null);
@@ -141,7 +135,6 @@ public class PROFILE_PAGE extends AppCompatActivity {
             nameEditText.setText("");
             birthdayText.setText("Select Birthday");
             genderSpinner.setSelection(0);
-            favoriteMapSpinner.setSelection(0);
             aboutMeEditText.setText("");
             profileImage.setImageResource(R.drawable.profile_icon); // Set a default image
             // Optionally, inform the user that their data was reset

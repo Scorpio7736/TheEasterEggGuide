@@ -33,8 +33,7 @@ public class BlackOpsColdWar_Map_Object_Handler {
                         R.drawable.diemachine_bocw,
                         dieMaschineMainQuest,
                         dieMaschineSideQuests,
-                        dieMaschineBuildables,
-                        false
+                        dieMaschineBuildables
                 )
         );
 
@@ -60,8 +59,7 @@ public class BlackOpsColdWar_Map_Object_Handler {
                         R.drawable.firebasez_bocw,
                         firebaseZMainQuest,
                         firebaseZSideQuests,
-                        firebaseZBuildables,
-                        false
+                        firebaseZBuildables
                 )
         );
 
@@ -87,8 +85,7 @@ public class BlackOpsColdWar_Map_Object_Handler {
                         R.drawable.mauerdertoten_bocw,
                         mfsTooMainQuest,
                         mfsTooSideQuests,
-                        mfsTooBuildables,
-                        false
+                        mfsTooBuildables
                 )
         );
 
@@ -114,8 +111,7 @@ public class BlackOpsColdWar_Map_Object_Handler {
                         R.drawable.forsaken_bocw,
                         forsakenMainQuest,
                         forsakenSideQuests,
-                        forsakenBuildables,
-                        false
+                        forsakenBuildables
                 )
         );
 

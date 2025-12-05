@@ -33,8 +33,7 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.ix_boiiii,
                         ixMainQuest,
                         ixSideQuests,
-                        ixBuildables,
-                        false
+                        ixBuildables
                 )
         );
 
@@ -60,8 +59,7 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.voyageofdespair_boiiii,
                         vodMainQuest,
                         vodSideQuests,
-                        vodBuildables,
-                        false
+                        vodBuildables
                 )
         );
 
@@ -87,8 +85,7 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.botd_boiiii,
                         botdMainQuest,
                         botdSideQuests,
-                        botdBuildables,
-                        false
+                        botdBuildables
                 )
         );
 
@@ -114,8 +111,7 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.classified_boiiii,
                         classifiedMainQuest,
                         classifiedSideQuests,
-                        classifiedBuildables,
-                        false
+                        classifiedBuildables
                 )
         );
 
@@ -141,8 +137,7 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.dotn_boiiii,
                         dotnMainQuest,
                         dotnSideQuests,
-                        dotnBuildables,
-                        false
+                        dotnBuildables
                 )
         );
 
@@ -168,8 +163,7 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.ancientevil_boiiii,
                         aeMainQuest,
                         aeSideQuests,
-                        aeBuildables,
-                        false
+                        aeBuildables
                 )
         );
 
@@ -195,8 +189,7 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.alphaomega_boiiii,
                         aoMainQuest,
                         aoSideQuests,
-                        aoBuildables,
-                        false
+                        aoBuildables
                 )
         );
 
@@ -222,8 +215,7 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.tagdertoten_boiiii,
                         tdtMainQuest,
                         tdtSideQuests,
-                        tdtBuildables,
-                        false
+                        tdtBuildables
                 )
         );
 
@@ -249,8 +241,7 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.deadopsarcade_boiiii,
                         doa3MainQuest,
                         doa3SideQuests,
-                        doa3Buildables,
-                        false
+                        doa3Buildables
                 )
         );
 

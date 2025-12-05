@@ -4,7 +4,8 @@
     <string name="profile_birthday_header">Birthday</string>
     <string name="profile_select_birthday">Select Birthday</string>
     <string name="profile_gender_header">Gender</string>
-    <string name="profile_favorite_map_header">Favorite Map</string>
     <string name="profile_about_me_hint">About Me</string>
     <string name="profile_save_button">Save</string>
+    <string name="favorites_title">Favorites</string>
+    <string name="no_favorites_message">No favorites saved yet!</string>
 </resources>

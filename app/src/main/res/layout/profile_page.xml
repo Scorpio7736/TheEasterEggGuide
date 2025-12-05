@@ -99,24 +99,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
-            <TextView
-                android:id="@+id/favorite_map_header"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Favorite Map"
-                android:textColor="@color/CUSTOM_ITEM_text_secondary_light"
-                app:layout_constraintTop_toBottomOf="@+id/gender_spinner"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <Spinner
-                android:id="@+id/favorite_map_spinner"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/favorite_map_header"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-
             <EditText
                 android:id="@+id/about_me_edittext"
                 android:layout_width="0dp"
@@ -127,7 +109,7 @@
                 android:gravity="top"
                 android:textColor="@color/CUSTOM_ITEM_text_primary_light"
                 android:textColorHint="@color/CUSTOM_ITEM_text_secondary_light"
-                app:layout_constraintTop_toBottomOf="@+id/favorite_map_spinner"
+                app:layout_constraintTop_toBottomOf="@+id/gender_spinner"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 

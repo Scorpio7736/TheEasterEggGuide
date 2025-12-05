@@ -36,8 +36,7 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.soe_boiii,
                         soeMainQuest,
                         soeSideQuests,
-                        soeBuildables,
-                        false
+                        soeBuildables
                 )
         );
 
@@ -63,8 +62,7 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.thegiant_boiii,
                         giantMainQuest,
                         giantSideQuests,
-                        giantBuildables,
-                        false
+                        giantBuildables
                 )
         );
 
@@ -93,8 +91,7 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.de_boiii,
                         deMainQuest,
                         deSideQuests,
-                        deBuildables,
-                        false
+                        deBuildables
                 )
         );
 
@@ -123,8 +120,7 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.zetsubounoshima_boiii,
                         znsMainQuest,
                         znsSideQuests,
-                        znsBuildables,
-                        false
+                        znsBuildables
                 )
         );
 
@@ -153,8 +149,7 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.gorodkrovi_boiii,
                         gkMainQuest,
                         gkSideQuests,
-                        gkBuildables,
-                        false
+                        gkBuildables
                 )
         );
 
@@ -183,8 +178,7 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.revelations_boiii,
                         revMainQuest,
                         revSideQuests,
-                        revBuildables,
-                        false
+                        revBuildables
                 )
         );
 
@@ -208,8 +202,7 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.nacht_boiii,
                         nachtZcMainQuest,
                         nachtZcSideQuests,
-                        nachtZcBuildables,
-                        false
+                        nachtZcBuildables
                 )
         );
 
@@ -233,8 +226,7 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.verruckt_boiii,
                         verrucktZcMainQuest,
                         verrucktZcSideQuests,
-                        verrucktZcBuildables,
-                        false
+                        verrucktZcBuildables
                 )
         );
 
@@ -258,8 +250,7 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.shinonuma_boiii,
                         shiNoNumaZcMainQuest,
                         shiNoNumaZcSideQuests,
-                        shiNoNumaZcBuildables,
-                        false
+                        shiNoNumaZcBuildables
                 )
         );
 
@@ -283,8 +274,7 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.kinodertoten_boiii,
                         kinoZcMainQuest,
                         kinoZcSideQuests,
-                        kinoZcBuildables,
-                        false
+                        kinoZcBuildables
                 )
         );
 
@@ -308,8 +298,7 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.ascension_boiii,
                         ascensionZcMainQuest,
                         ascensionZcSideQuests,
-                        ascensionZcBuildables,
-                        false
+                        ascensionZcBuildables
                 )
         );
 
@@ -333,8 +322,7 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.shangrila_boiii,
                         shangriLaZcMainQuest,
                         shangriLaZcSideQuests,
-                        shangriLaZcBuildables,
-                        false
+                        shangriLaZcBuildables
                 )
         );
 
@@ -358,8 +346,7 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.moon_boiii,
                         moonZcMainQuest,
                         moonZcSideQuests,
-                        moonZcBuildables,
-                        false
+                        moonZcBuildables
                 )
         );
 
@@ -388,8 +375,7 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.origins_boii,
                         originsZcMainQuest,
                         originsZcSideQuests,
-                        originsZcBuildables,
-                        false
+                        originsZcBuildables
                 )
         );
 
@@ -418,8 +404,7 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.deadopsarcade_boiii,
                         doa2MainQuest,
                         doa2SideQuests,
-                        doa2Buildables,
-                        false
+                        doa2Buildables
                 )
         );
 
