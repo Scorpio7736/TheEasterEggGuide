@@ -3,6 +3,8 @@ package com.example.theeastereggguide;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -72,9 +74,26 @@ public class MAPPEGG_PAGE extends AppCompatActivity {
 
                 itemButton.setOnClickListener(v -> {
                     if (stepsContainer.getVisibility() == View.VISIBLE) {
-                        stepsContainer.setVisibility(View.GONE);
+                        Animation slideUp = AnimationUtils.loadAnimation(this, R.anim.slide_up);
+                        stepsContainer.startAnimation(slideUp);
+                        slideUp.setAnimationListener(new Animation.AnimationListener() {
+                            @Override
+                            public void onAnimationStart(Animation animation) {
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animation animation) {
+                                stepsContainer.setVisibility(View.GONE);
+                            }
+
+                            @Override
+                            public void onAnimationRepeat(Animation animation) {
+                            }
+                        });
                     } else {
                         stepsContainer.setVisibility(View.VISIBLE);
+                        Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
+                        stepsContainer.startAnimation(slideDown);
                     }
                 });
 
