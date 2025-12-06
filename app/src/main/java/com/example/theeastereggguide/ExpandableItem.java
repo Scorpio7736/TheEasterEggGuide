@@ -12,6 +12,14 @@ public class ExpandableItem implements Serializable {
         this.steps = steps;
     }
 
+    public ExpandableItem()
+    {
+        // No Quest Constructor
+        this.name = "None";
+        this.steps = new ArrayList<String>();
+        this.steps.add("There are no steps as there is no quest.");
+    }
+
     public String getName() {
         return name;
     }
