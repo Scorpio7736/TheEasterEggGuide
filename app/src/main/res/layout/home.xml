@@ -31,7 +31,7 @@
         android:layout_marginBottom="16dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/suggestions_button"
+        app:layout_constraintBottom_toTopOf="@+id/recommend_map_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome_text">
@@ -43,14 +43,26 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/suggestions_button"
+        android:id="@+id/recommend_map_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Suggestions"
+        android:text="Recommend Map"
         app:layout_constraintBottom_toTopOf="@id/bottom_card_view"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/how_to_play_button"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/how_to_play_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Learn How To Play"
+        app:layout_constraintBottom_toBottomOf="@+id/recommend_map_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/recommend_map_button"
+        app:layout_constraintTop_toTopOf="@+id/recommend_map_button" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/bottom_card_view"
