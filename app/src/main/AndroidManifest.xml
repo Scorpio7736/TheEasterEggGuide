@@ -26,9 +26,10 @@
         <activity android:name=".MAPS_PAGE" />
         <activity android:name=".MAPPEGG_PAGE" />
         <activity android:name=".SETTINGS_PAGE" />
-        <activity android:name=".ABOUT_ME" />
+        <activity android:name=".ABOUT_ME_PAGE" />
         <activity android:name=".PROFILE_PAGE" />
         <activity android:name=".Favorites_PAGE" />
+        <activity android:name=".EasterEgg_Reveal_Page" />
     </application>
 
 </manifest>

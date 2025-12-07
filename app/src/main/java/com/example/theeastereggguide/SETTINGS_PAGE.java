@@ -19,7 +19,7 @@ public class SETTINGS_PAGE extends AppCompatActivity {
         setContentView(R.layout.settings_page);
 
         Button aboutMeButton = findViewById(R.id.about_me_button);
-        aboutMeButton.setOnClickListener(v -> startActivity(new Intent(SETTINGS_PAGE.this, ABOUT_ME.class)));
+        aboutMeButton.setOnClickListener(v -> startActivity(new Intent(SETTINGS_PAGE.this, ABOUT_ME_PAGE.class)));
 
         Button wifiCheckButton = findViewById(R.id.wifi_check_button);
         wifiCheckButton.setOnClickListener(v -> checkWifi());

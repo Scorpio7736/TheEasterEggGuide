@@ -2,17 +2,16 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="0dp"
-    android:layout_height="180dp"
+    android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:layout_columnWeight="1"
-    android:layout_gravity="fill_horizontal"
     app:cardBackgroundColor="@color/CUSTOM_ITEM_background_light"
     app:cardCornerRadius="10dp"
     app:cardElevation="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/map_cover_image"
@@ -26,11 +25,13 @@
         <TextView
             android:id="@+id/map_name_text"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:maxLines="2"
             android:paddingStart="12dp"
+            android:paddingTop="8dp"
             android:paddingEnd="12dp"
+            android:paddingBottom="8dp"
             android:text="Map Name"
             android:textColor="@color/CUSTOM_ITEM_text_primary_light"
             android:textStyle="bold"
@@ -40,9 +41,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/map_cover_image"
-            app:layout_constraintVertical_bias="0.5"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintTop_toBottomOf="@id/map_cover_image" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

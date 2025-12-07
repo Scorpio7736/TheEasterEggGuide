@@ -1,19 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/CUSTOM_ITEM_background_dark"
+    tools:context=".ABOUT_ME_PAGE">
 
     <TextView
-        android:id="@+id/about_me_text"
+        android:id="@+id/about_me_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="About Me Page"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_rectangle"
+        android:padding="16dp"
+        android:text="About – The Easter Egg Guide"
+        android:textColor="@color/CUSTOM_ITEM_text_primary_light"
         android:textSize="24sp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/about_me_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Description"
+                android:textColor="@color/CUSTOM_ITEM_text_primary_light"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Discover, explore, and complete every Call of Duty Zombies Easter Egg—all in one app. Browse maps, track quests, and learn step-by-step processes with clean organization and fast navigation. Whether you’re hunting songs, side quests, main quests, or buildables, this guide keeps everything at your fingertips.\n~ [INSERT TEAM NAME]"
+                android:textColor="@color/CUSTOM_ITEM_text_primary_light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Contact Us"
+                android:textColor="@color/CUSTOM_ITEM_text_primary_light"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:autoLink="email"
+                android:text="ugorrc29@uwgb.edu\nlondjc22@uwgb.edu"
+                android:textColor="@color/CUSTOM_ITEM_text_primary_light"
+                android:textColorLink="@color/CUSTOM_ITEM_highlight_light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Meet our team!"
+                android:textColor="@color/CUSTOM_ITEM_text_primary_light"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="• David Desing – [TITLE]\n• Jack London – [TITLE]"
+                android:textColor="@color/CUSTOM_ITEM_text_primary_light"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Acknowledgements"
+                android:textColor="@color/CUSTOM_ITEM_text_primary_light"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="We want to give our heartfelt thanks to everyone who supported the creation of The Easter Egg Guide. This app exists thanks to the fans who love Zombies as much as we do, the resources provided at UW–Green Bay, and the collaborative environment that allowed us to grow as developers.\nWe are especially grateful to the Call of Duty Zombies community, whose documentation, passion, and discoveries helped shape this project. We appreciate every creator, guide writer, and player who keeps these maps alive through their dedication and knowledge."
+                android:textColor="@color/CUSTOM_ITEM_text_primary_light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="LEGAL INFORMATION"
+                android:textColor="@color/CUSTOM_ITEM_text_primary_light"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="We at [GROUP NAME] hold NO copyright over any Call of Duty Zombies assets, ideas, quests, characters, or concepts displayed or referenced in this application.\nAll official content related to Call of Duty, Call of Duty Zombies, and their associated map names, designs, Easter Eggs, characters, and storylines is owned solely by Activision, Treyarch, and their respective rights holders.\nThis app is a fan-made reference guide created for educational and organizational purposes only, and is not affiliated with or endorsed by Activision or Treyarch in any way."
+                android:textColor="@color/CUSTOM_ITEM_text_primary_light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Accessibility"
+                android:textColor="@color/CUSTOM_ITEM_text_primary_light"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="We designed our interface and color palette with accessibility as a priority. All major UI elements and text meet WCAG AA contrast standards to ensure visibility for users with low vision or color-vision differences. Our goal was to maintain the dark, atmospheric COD Zombies aesthetic without sacrificing clarity or readability. The result is an inclusive, thematic, and easy-to-navigate experience for all users."
+                android:textColor="@color/CUSTOM_ITEM_text_primary_light" />
+
+            <ImageView
+                android:id="@+id/app_logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/app_logo"
+                android:background="@drawable/rounded_rectangle" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

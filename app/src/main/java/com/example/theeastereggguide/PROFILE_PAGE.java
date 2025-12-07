@@ -17,6 +17,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.util.Calendar;
+import java.util.List;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class PROFILE_PAGE extends AppCompatActivity {
@@ -68,7 +70,7 @@ public class PROFILE_PAGE extends AppCompatActivity {
             datePickerDialog.show();
         });
 
-        saveButton.setOnClickListener(v -> saveData());
+        saveButton.setOnClickListener(v -> EggListener());
 
         // Gender Spinner
         ArrayAdapter<CharSequence> genderAdapter = ArrayAdapter.createFromResource(this,
@@ -104,6 +106,23 @@ public class PROFILE_PAGE extends AppCompatActivity {
             }
             return false;
         });
+    }
+
+    private void EggListener() {
+        String username = nameEditText.getText().toString().trim();
+        List<EasterEgg> easterEggs = EasterEgg_Object_Handler.getEasterEggs();
+
+        for (EasterEgg egg : easterEggs) {
+            if (username.equalsIgnoreCase(egg.incitementName)) {
+                Intent intent = new Intent(this, EasterEgg_Reveal_Page.class);
+                intent.putExtra("EASTER_EGG_NAME", egg.incitementName);
+                startActivity(intent);
+                return; // Stop further execution
+            }
+        }
+
+        // If no match is found, proceed with saving data
+        saveData();
     }
 
     private void saveData() {
