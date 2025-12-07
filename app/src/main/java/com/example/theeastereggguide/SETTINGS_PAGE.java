@@ -17,6 +17,7 @@ public class SETTINGS_PAGE extends AppCompatActivity {
 
     private static final String PREFS_NAME = "Settings";
     private static final String SOUND_ENABLED_KEY = "sound_enabled";
+    private static final String MUSIC_ENABLED_KEY = "music_enabled";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class SETTINGS_PAGE extends AppCompatActivity {
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         boolean soundEnabled = settings.getBoolean(SOUND_ENABLED_KEY, true);
+        boolean musicEnabled = settings.getBoolean(MUSIC_ENABLED_KEY, true);
 
         SwitchMaterial soundSwitch = findViewById(R.id.sound_switch);
         soundSwitch.setChecked(soundEnabled);
@@ -33,6 +35,20 @@ public class SETTINGS_PAGE extends AppCompatActivity {
             SharedPreferences.Editor editor = settings.edit();
             editor.putBoolean(SOUND_ENABLED_KEY, isChecked);
             editor.apply();
+        });
+
+        SwitchMaterial musicSwitch = findViewById(R.id.music_switch);
+        musicSwitch.setChecked(musicEnabled);
+
+        musicSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putBoolean(MUSIC_ENABLED_KEY, isChecked);
+            editor.apply();
+            if (isChecked) {
+                MusicManager.getInstance().startMusic();
+            } else {
+                MusicManager.getInstance().stopMusic();
+            }
         });
 
         Button aboutMeButton = findViewById(R.id.about_me_button);
@@ -67,6 +83,12 @@ public class SETTINGS_PAGE extends AppCompatActivity {
             }
             return false;
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MusicManager.getInstance().resumeMusic(this);
     }
 
     private void checkWifi() {

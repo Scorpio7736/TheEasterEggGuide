@@ -108,6 +108,12 @@ public class PROFILE_PAGE extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MusicManager.getInstance().resumeMusic(this);
+    }
+
     private void EggListener() {
         String username = nameEditText.getText().toString().trim();
         List<EasterEgg> easterEggs = EasterEgg_Object_Handler.getEasterEggs();

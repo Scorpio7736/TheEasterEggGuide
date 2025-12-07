@@ -140,6 +140,7 @@ public class HOME_PAGE extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         sliderHandler.postDelayed(sliderRunnable, 10000);
+        MusicManager.getInstance().resumeMusic(this);
     }
 
     private void showFirstTimeDialog()

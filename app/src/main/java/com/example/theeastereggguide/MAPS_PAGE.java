@@ -68,6 +68,12 @@ public class MAPS_PAGE extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MusicManager.getInstance().resumeMusic(this);
+    }
+
     public void Display_Map_Cells(Enums.COD_GAME selectedGame) {
         GridLayout mapsContainer = findViewById(R.id.maps_container);
         mapsContainer.removeAllViews(); // Clear previous map cells
