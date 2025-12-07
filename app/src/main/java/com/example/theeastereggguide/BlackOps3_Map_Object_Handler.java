@@ -14,109 +14,102 @@ public class BlackOps3_Map_Object_Handler {
         // -------------------------- SHADOWS OF EVIL --------------------------
         ArrayList<ExpandableItem> soeMainQuest = new ArrayList<>();
         soeMainQuest.add(new ExpandableItem(
-                "Main Quest - Sacrifice Rituals and Gateworms",
+                "Main Quest - Apocalypse Averted",
                 new ArrayList<>(Arrays.asList(
-                        "Begin the game and locate each character’s summoning item (e.g., pen, lawyer’s badge, championship belt, detective’s badge) in Beast Mode.",
-                        "Open the ritual rooms in each district (Canal, Footlight, Waterfront) using Beast Mode to power up doors and grapple points.",
-                        "Place each summoning item on its corresponding ritual altar and start the sacrifice ritual while fending off Keepers.",
-                        "Complete all four rituals (three districts plus the Ruby Rabbit/theatre area) to obtain the Gateworms needed for the final ritual.",
-                        "Collect the Gateworms and the Summoning Key to prepare for opening the giant Rift door in the underground area."
+                        "Collect ritual items and complete the rituals for each character.",
+                        "Open every portal.",
+                        "Place each gateworm into their fountain in the pack a punch room.",
+                        "Place summoning key on the altar to fully open the Pack-a-Punch chamber.",
+                        "Locate the tram and go to it.",
+                        "Ride the tram looking out the window for symbols hidden around the map (9 in total).",
+                        "Trams should run Footlight -> Canals -> Waterfront -> Footlight until you identify all 3 correct Apothicon symbols for your sword code.",
+                        "Use Beast mode in the Undercroft to shock the 3 symbols on the wall.",
+                        "Grab the egg, and open all altar boxes in Beast mode.",
+                        "Place egg at each altar and collect souls by killing zombies until you hear the sound cue.",
+                        "Place the egg back in the starting position to get the Apothicon Sword.",
+                        "Go to the altar associated with your character and take the egg from the ghost.",
+                        "Place the Egg (Arch-Ovum) at each of the ritual sites around the map one time per round, defending it from Margwa waves.",
+                        "Place the Egg back in the hands of the ghost and get the upgraded Sword.",
+                        "Pick up the flag from the Shadowman ritual table in the Pack-a-Punch room.",
+                        "Take the flag to the required ritual circle for the current character; place it into the circle to begin the defense phase.",
+                        "Protect the flag from purple parasites, Margwas, and meatballs. If the flag breaks, return to the pedestal to reset and re-acquire it.",
+                        "Carry the charged flag back to the ghost located in the district tied to your character and place it into the ghost’s hands.",
+                        "Repeat the flag retrieval, protection, and delivery sequence for all remaining districts until all four ghost rituals are completed.",
+                        "Return to the Pack-a-Punch room, where the Shadowman will be floating in the ritual circle above the altar.",
+                        "Stand on the correct glowing summoning circle positions to lower the Shadowman’s shield, then shoot him while he is vulnerable.",
+                        "Continue lowering his shield and damaging him until he becomes trapped inside the ritual altar.",
+                        "When the Shadowman is captured, the Giant Gateworm appears above the altar and Unlimited Beast Mode becomes available.",
+                        "Enter Beast Mode and shock all three train station power panels and all three Keeper statues simultaneously as a team.",
+                        "Once every Keeper and panel is powered at the same time, the final ritual completes and the ending cutscene triggers."
                 ))
         ));
-        soeMainQuest.add(new ExpandableItem(
-                "Summoning the Apothicon and Shadowman Boss Fight",
-                new ArrayList<>(Arrays.asList(
-                        "Travel to the Rift area and open the wall with Beast Mode to access the large stone archway.",
-                        "Place the Gateworms and Summoning Key at the designated points in the Rift to form platforms and open dimensional portals.",
-                        "Enter the Apothicon realm and activate the four corruption generators/altars to power the arena.",
-                        "Lure the Shadowman into view and shoot him while he floats above the altar, forcing him into the Summoning Key.",
-                        "Defend the flags and complete the flag escort steps, then finish the sequence to trap the Shadowman and trigger the ending cutscene."
-                ))
-        ));
-
         ArrayList<ExpandableItem> soeSideQuests = new ArrayList<>();
         soeSideQuests.add(new ExpandableItem(
                 "Song - Snakeskin Boots",
                 new ArrayList<>(Arrays.asList(
-                        "Locate the hidden musical trigger objects (such as radios or microphones) scattered around Morg City.",
-                        "Interact with the first trigger to hear a confirmation audio cue.",
-                        "Find and interact with the remaining triggers in different districts or hidden rooms.",
-                        "After activating all of them, the song 'Snakeskin Boots' will begin to play over the match.",
-                        "Enjoy the music while continuing to complete rituals, upgrade weapons, or go for high rounds."
+                        "Locate the four phonograph record players scattered across each district: Footlight, Canals, Waterfront and Undercroft.",
+                        "Activate Beast Mode and destroy the shrouded crates at each record player location to reveal the phonograph.",
+                        "Place the phonograph into the record-player slot at each location and let it spin.",
+                        "Ride the tram through all three districts (Footlight → Canals → Waterfront) and listen for the musical cue to trigger each phonograph.",
+                        "After all four have been activated, return to the Undercroft ritual area.",
+                        "In the ritual room, head to the statue of the singer and interact with the floating musical note symbol above the statue.",
+                        "Use Beast Mode to run the circuit and shock the three wall “Keepers” icons in the Undercroft chamber.",
+                        "Once the Keepers icons are all charged, approach the statue and press the use-key to start the musical sequence.",
+                        "Listen for the correct melody and replicate it by interacting with the piano in the shadow ritual room.",
+                        "Each key you hit corresponds to the glow on the piano: Blue, Teal, and Purple.",
+                        "When the full melody is completed correctly, the speaker above the ritual room door will play the full track.",
+                        "The door opens to the “music vault” containing the exclusive song reward.",
+                        "Pick up the reward (song record) from the vault and place it into your menu to unlock the in-game music Easter-egg track.",
+                        "Exit the ritual room and re-ride the tram if you want to reset or replay the sequence for other players."
+
                 ))
         ));
         soeSideQuests.add(new ExpandableItem(
                 "Sword Upgrade Quest",
                 new ArrayList<>(Arrays.asList(
-                        "Find all egg statues beneath the Pack-a-Punch area and place the Apothicon Egg on each Cthulhu statue to charge it with souls.",
-                        "Kill zombies near each statue until the egg absorbs enough souls, then return to the egg altar to receive your base sword.",
-                        "Locate your character’s personal symbol in the district and interact with the corresponding Keeper symbol to accept a side quest.",
-                        "Complete the Keeper challenges in different locations by defending the ghostly Keeper while it drains souls from zombies.",
-                        "Return to the underground to claim the upgraded sword, granting you stronger attacks and charged abilities."
+                        "Go to your character’s personal altar in the Rift and receive the Arch-Ovum from the ghost associated with your character.",
+                        "Take the Arch-Ovum to the first ritual circle located in your character’s assigned district and place it in the center of the circle.",
+                        "Defend the ritual circle from waves of Margwas and other enemies until the ritual completes and the Arch-Ovum absorbs enough energy.",
+                        "Pick the Arch-Ovum back up after the ritual completes and take it to the second ritual circle assigned to your character.",
+                        "Place the Arch-Ovum again and defend against another Margwa wave, preventing any enemies from interrupting the ritual.",
+                        "After completing the second site, retrieve the Arch-Ovum and move to the third ritual circle in the next district.",
+                        "Place the Arch-Ovum for the third time and survive the incoming Margwa attack until the ritual finishes.",
+                        "Pick up the Arch-Ovum once more and go to the fourth and final ritual circle on the map.",
+                        "Defend the last ritual circle from the Margwa wave without leaving the ring or letting the ritual fail.",
+                        "Return to your character’s altar in the Rift once all four ritual defenses have been completed successfully.",
+                        "Place the fully charged Arch-Ovum back into the ghost’s hands at the altar.",
+                        "Receive the upgraded Apothicon Sword (Super Sword) as your reward."
                 ))
         ));
         soeSideQuests.add(new ExpandableItem(
                 "Civil Protector Fuses",
                 new ArrayList<>(Arrays.asList(
-                        "Search each district’s train or tram route for fuse boxes that can be picked up from the tram’s interior.",
-                        "Collect all three fuses, one from each district’s tram, by riding the tram and looking along the rails.",
-                        "Take the fuses to the underground subway area and insert them into the control panel near the Civil Protector station.",
-                        "Once powered, activate the Civil Protector from call boxes located in each district by spending points.",
-                        "Use the Civil Protector as an AI ally to revive players, kill zombies, and help defend objective areas."
-                ))
-        ));
-        soeSideQuests.add(new ExpandableItem(
-                "Flag Step Defense",
-                new ArrayList<>(Arrays.asList(
-                        "After sufficient progress in the main quest, obtain the flag from the Rift area to begin the defense step.",
-                        "Carry the flag to marked ritual circles around the map while Margwas, parasites, and other enemies attack.",
-                        "Place the flag in each marked circle and defend it from waves of enemies until souls fully charge it.",
-                        "Move the charged flag to the designated altar or ritual table to progress the Shadowman sequence.",
-                        "Repeat the flag defense process at multiple locations until all required circles are complete."
-                ))
-        ));
-        soeSideQuests.add(new ExpandableItem(
-                "Margwa Heart / Eggs Side Tasks",
-                new ArrayList<>(Arrays.asList(
-                        "Defeat Margwas during rituals or later rounds to obtain Margwa Hearts as rare drops.",
-                        "Use the Margwa Heart as a component in crafting or upgrading certain Apothicon-related weapons or items.",
-                        "Collect eggs in the underground area and place them at Cthulhu statues to charge them with zombie souls.",
-                        "Leverage these eggs and Margwa items to progress sword upgrades and other hidden mechanics.",
-                        "Combine these side tasks with the main quest to fully unlock Shadows of Evil’s Apothicon powers."
+                        "Locate and collect the three Fuse Boxes scattered around the map: one in Footlight District, one in Canals District, and one in Waterfront District.",
+                        "Use Beast Mode to access the fuse box areas by breaking the yellow vents and entering the hidden passageways.",
+                        "Activate each Fuse Box by standing near it until the buzzer sound stops; each box powers one of the Civil Protector’s activation stations.",
+                        "After all three Fuse Boxes are activated, return to the Pack-a-Punch room and interact with the switch on the wall labeled “CIVIL PROTECTOR ACTIVATE”.",
+                        "Trigger the Civil Protector’s spawn by pressing the switch; a large mechanical drone will descend from the ceiling.",
+                        "Locate the three power stations for the Civil Protector around the tram tracks (one in each district).",
+                        "Insert one gateworm into each power station while the Civil Protector drone patrols nearby.",
+                        "Once all three gateworms are secured, the Civil Protector will become friendly and unlock the hidden Perk Bottle (Egyptian Dark Aether symbol) in the Pack-a-Punch chamber.",
+                        "Interact with the newly unlocked bottle to acquire the Civil Protector bonus perk for the remainder of the round.",
+                        "At the end of the round (after zombie waves), the Civil Protector will depart and you can pick up the shield-like drone from its landing pad as a keepable item."
                 ))
         ));
 
         ArrayList<ExpandableItem> soeBuildables = new ArrayList<>();
         soeBuildables.add(new ExpandableItem(
-                "Ritual Altars",
-                new ArrayList<>(Arrays.asList(
-                        "Identify each character’s ritual altar location in Morg City (e.g., Ruby Rabbit, Boxing Gym, Footlight stage).",
-                        "Use Beast Mode to open locked doors and power up symbols leading to each altar room.",
-                        "Bring the associated ritual item to the altar and place it on the central table.",
-                        "Start the ritual and survive waves of Keepers until the ritual completes.",
-                        "Collect the resulting Gateworm or Summoning Key advancement from each finished ritual."
-                ))
-        ));
-        soeBuildables.add(new ExpandableItem(
                 "Apothicon Servant",
                 new ArrayList<>(Arrays.asList(
-                        "Obtain the Margwa Heart, Xenomatter, and Tentacle from Margwas and parasites as rare drops.",
-                        "Once all parts are collected, find a crafting table such as in the Footlight, Canal, or Waterfront districts.",
-                        "Assemble the parts at the build table to create the Apothicon Servant.",
-                        "Use the Servant’s charged shot to create a powerful black hole that sucks in and kills nearby zombies.",
-                        "Manage its limited ammo carefully during high-round or main quest steps."
-                ))
+                        "Obtain the first part by killing a Margwa; pick up the Margwa Heart it drops.",
+                        "Open the pods around the map until you get the second part, the Tentacle, from a Purple Pod; keep opening until one drops.",
+                        "Kill Parasites or Meatballs during a round when the flying insects spawn to obtain the third part, the Xenomatter, dropped randomly.",
+                        "Once you have the Margwa Heart, Tentacle, and Xenomatter, go to any workbench located in the Waterfront, Canal District, or Footlight District.",
+                        "Interact with the workbench to craft the Apothicon Servant (base Wonder Weapon).",
+                        "Use the Apothicon Servant to suck zombies into black holes to gather kills and power it for high-damage usage."
+                        ))
         ));
-        soeBuildables.add(new ExpandableItem(
-                "Civil Protector",
-                new ArrayList<>(Arrays.asList(
-                        "Insert all three fuses into the underground panel to power up the Civil Protector system.",
-                        "Look for Civil Protector call boxes in each district marked with a blue light.",
-                        "Spend points at a call box to summon the Civil Protector to that location.",
-                        "Use the Civil Protector’s strong weaponry and revive capability to help through difficult rounds.",
-                        "Re-summon him as needed once his timer runs out, as long as you have enough points."
-                ))
-        ));
+
         soeBuildables.add(new ExpandableItem(
                 "Beast Mode Mechanic",
                 new ArrayList<>(Arrays.asList(
@@ -125,16 +118,6 @@ public class BlackOps3_Map_Object_Handler {
                         "Use Beast Mode to open shortcuts, power perk machines, and reveal hidden paths for rituals.",
                         "Plan your route before entering Beast Mode to maximize the number of actions completed per activation.",
                         "Return to human form when the timer ends, then repeat on future rounds as new tasks appear."
-                ))
-        ));
-        soeBuildables.add(new ExpandableItem(
-                "Pack A Punch Rift",
-                new ArrayList<>(Arrays.asList(
-                        "Open the rift door in each district by using Beast Mode to break the wall with symbol markings.",
-                        "Enter the Rift to access the underground subway hub connecting all districts.",
-                        "Complete the necessary rituals and place the Gateworms to open the Pack-a-Punch altar.",
-                        "Interact with the now-stabilized Pack-a-Punch machine to upgrade your weapons.",
-                        "Use the Rift as a fast travel hub while defending the Pack-a-Punch area from enemies."
                 ))
         ));
 
