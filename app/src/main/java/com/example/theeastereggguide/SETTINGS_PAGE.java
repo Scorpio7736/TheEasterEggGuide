@@ -19,6 +19,11 @@ public class SETTINGS_PAGE extends AppCompatActivity {
     private static final String SOUND_ENABLED_KEY = "sound_enabled";
     private static final String MUSIC_ENABLED_KEY = "music_enabled";
 
+    private static final String Wifi_Check_Title = "Wifi Check";
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,7 +110,7 @@ public class SETTINGS_PAGE extends AppCompatActivity {
 
     private void showWifiMessage(boolean isConnected) {
         new AlertDialog.Builder(this)
-                .setTitle("Wi-Fi Check")
+                .setTitle(Wifi_Check_Title)
                 .setMessage(isConnected ? "You are connected to the internet." : "You are not connected to the internet.")
                 .setPositiveButton("OK", null)
                 .show();

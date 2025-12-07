@@ -21,7 +21,7 @@ public class EasterEgg_Object_Handler {
 
 // ------------------------- ULTIMIS -------------------------
         easterEggs.add(new EasterEgg(
-                "TankUltimis",
+                "Meathead",
                 "Corporal \"Tank\" Dempsey",
                 "United States Marine Corps",
                 "Call of Duty: World at War – Zombies (Shi No Numa, 2009)",
@@ -44,7 +44,7 @@ public class EasterEgg_Object_Handler {
 
 // ------------------------- PRIMIS -------------------------
         easterEggs.add(new EasterEgg(
-                "TankPrimis",
+                "Tank",
                 "Staff Sergeant \"Tank\" Dempsey",
                 "United States Marine Corps / Primis",
                 "Call of Duty: Black Ops III – Zombies (The Giant / Der Eisendrache, 2015)",
@@ -73,7 +73,7 @@ public class EasterEgg_Object_Handler {
 
 // ------------------------- ULTIMIS -------------------------
         easterEggs.add(new EasterEgg(
-                "NikolaiUltimis",
+                "The Russian",
                 "Nikolai Belinski",
                 "Red Army – USSR",
                 "Call of Duty: World at War – Zombies (Shi No Numa, 2009)",
@@ -96,7 +96,7 @@ public class EasterEgg_Object_Handler {
 
 // ------------------------- PRIMIS -------------------------
         easterEggs.add(new EasterEgg(
-                "NikolaiPrimis",
+                "Comrade",
                 "Nikolai Belinski (Primis)",
                 "Red Army / Primis",
                 "Call of Duty: Black Ops III – Zombies (The Giant / Gorod Krovi, 2015)",
@@ -125,7 +125,7 @@ public class EasterEgg_Object_Handler {
 
 // ------------------------- ULTIMIS -------------------------
         easterEggs.add(new EasterEgg(
-                "TakeoUltimis",
+                "Mr.Honour",
                 "Captain Takeo Masaki",
                 "Imperial Japanese Army",
                 "Call of Duty: World at War – Zombies (Shi No Numa, 2009)",
@@ -148,7 +148,7 @@ public class EasterEgg_Object_Handler {
 
 // ------------------------- PRIMIS -------------------------
         easterEggs.add(new EasterEgg(
-                "TakeoPrimis",
+                "The Warrior",
                 "Takeo Masaki (Primis)",
                 "Japanese Imperial Army / Primis",
                 "Call of Duty: Black Ops III – Zombies (The Giant / Zetsubou No Shima, 2015)",
@@ -177,7 +177,7 @@ public class EasterEgg_Object_Handler {
 
 // ------------------------- ULTIMIS RICHTOFEN (CENSORED) -------------------------
         easterEggs.add(new EasterEgg(
-                "RichtofenUltimis",
+                "The Doctor",
                 "Dr. Edward Richtofen",
                 "Group 935 Scientist",
                 "Call of Duty: World at War – Zombies (Shi No Numa, 2009)",
@@ -200,7 +200,7 @@ public class EasterEgg_Object_Handler {
 
 // ------------------------- ULTIMIS RICHTOFEN (UNCENSORED) -------------------------
         easterEggs.add(new EasterEgg(
-                "TheButcher",
+                "The Butcher",
                 "Dr. Edward Richtofen",
                 "Group 935 / Nazi Scientist",
                 "Call of Duty: World at War – Zombies (Shi No Numa, 2009)",
@@ -224,7 +224,7 @@ public class EasterEgg_Object_Handler {
 
 // ------------------------- PRIMIS -------------------------
         easterEggs.add(new EasterEgg(
-                "RichtofenPrimis",
+                "Herr Doctor",
                 "Dr. Edward Richtofen (Primis)",
                 "Group 935 / Aether Traveler / Primis",
                 "Call of Duty: Black Ops III – Zombies (The Giant / Shadows of Evil, 2015)",

@@ -50,6 +50,7 @@ public class PROFILE_PAGE extends AppCompatActivity {
         genderSpinner = findViewById(R.id.gender_spinner);
         aboutMeEditText = findViewById(R.id.about_me_edittext);
         Button saveButton = findViewById(R.id.save_button);
+        Button cancelButton = findViewById(R.id.cancel_button);
 
         profileImage.setOnClickListener(v -> {
             Intent galleryIntent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
@@ -71,6 +72,11 @@ public class PROFILE_PAGE extends AppCompatActivity {
         });
 
         saveButton.setOnClickListener(v -> EggListener());
+
+        cancelButton.setOnClickListener(v -> {
+            loadData();
+            Toast.makeText(this, "Changes reverted", Toast.LENGTH_SHORT).show();
+        });
 
         // Gender Spinner
         ArrayAdapter<CharSequence> genderAdapter = ArrayAdapter.createFromResource(this,

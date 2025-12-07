@@ -40,12 +40,12 @@ public class HOME_PAGE extends AppCompatActivity {
         viewPager2.setUserInputEnabled(false);
 
         List<Integer> imageList = new ArrayList<>();
-        imageList.add(R.drawable.slide_bocw);
+        imageList.add(R.drawable.slide_waw);
         imageList.add(R.drawable.slide_boi);
         imageList.add(R.drawable.slide_boii);
         imageList.add(R.drawable.slide_boiii);
         imageList.add(R.drawable.slide_boiiii);
-        imageList.add(R.drawable.slide_waw);
+        imageList.add(R.drawable.slide_bocw);
 
         ImageSliderAdapter adapter = new ImageSliderAdapter(imageList);
         viewPager2.setAdapter(adapter);

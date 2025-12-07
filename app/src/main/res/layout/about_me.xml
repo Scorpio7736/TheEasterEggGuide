@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:text="• David Desing – [TITLE]\n• Jack London – [TITLE]"
+                android:text="• Rick Ugorji – [TITLE]\n• Jack London – [TITLE]"
                 android:textColor="@color/CUSTOM_ITEM_text_primary_light"/>
 
             <TextView
