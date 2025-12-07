@@ -130,19 +130,6 @@ public class HOME_PAGE extends AppCompatActivity {
         }
     };
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        sliderHandler.removeCallbacks(sliderRunnable);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        sliderHandler.postDelayed(sliderRunnable, 10000);
-        MusicManager.getInstance().resumeMusic(this);
-    }
-
     private void showFirstTimeDialog()
     {
         String titleText = "Welcome!";

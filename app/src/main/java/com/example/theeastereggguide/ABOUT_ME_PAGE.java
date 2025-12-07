@@ -10,10 +10,4 @@ public class ABOUT_ME_PAGE extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.about_me);
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        MusicManager.getInstance().resumeMusic(this);
-    }
 }

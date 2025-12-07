@@ -2,7 +2,32 @@ package com.example.theeastereggguide;
 
 public class Enums {
 
-    public enum COD_GAME {
+    public enum App_Music
+    {
+        Damned_Black_Ops_1("Damned Black Ops 1", R.raw.easter_egg_found),
+        Damned_Black_Ops_2("Damned Black Ops 2", R.raw.easter_egg_found),
+        Damned_Black_Ops_3("Damned Black Ops 3", R.raw.damned_boi),
+        Damned_Black_Ops_4("Damned Black Ops 4", R.raw.easter_egg_found);
+
+        private final String displayName;
+        private final int musicResId;
+
+        App_Music(String displayName, int musicResId) {
+            this.displayName = displayName;
+            this.musicResId = musicResId;
+        }
+
+        @Override
+        public String toString() {
+            return displayName;
+        }
+
+        public int getMusicResId() {
+            return musicResId;
+        }
+    }
+    public enum COD_GAME
+    {
         World_at_War("World at War"),
         Black_Ops_1("Black Ops 1"),
         Black_Ops_2("Black Ops 2"),

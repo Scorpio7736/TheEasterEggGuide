@@ -34,41 +34,15 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/sound_text"
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/music_settings_button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="Sound"
-                android:textSize="18sp"
-                android:textColor="@color/CUSTOM_ITEM_text_primary_light"
+                android:text="Sound Settings"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/settings_title" />
-
-            <com.google.android.material.switchmaterial.SwitchMaterial
-                android:id="@+id/sound_switch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBaseline_toBaselineOf="@id/sound_text"
-                app:layout_constraintEnd_toEndOf="parent" />
-
-            <TextView
-                android:id="@+id/music_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="Music"
-                android:textSize="18sp"
-                android:textColor="@color/CUSTOM_ITEM_text_primary_light"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/sound_text" />
-
-            <com.google.android.material.switchmaterial.SwitchMaterial
-                android:id="@+id/music_switch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBaseline_toBaselineOf="@id/music_text"
-                app:layout_constraintEnd_toEndOf="parent" />
 
             <TextView
                 android:id="@+id/notifications_text"
@@ -79,7 +53,7 @@
                 android:textSize="18sp"
                 android:textColor="@color/CUSTOM_ITEM_text_primary_light"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/music_text" />
+                app:layout_constraintTop_toBottomOf="@id/music_settings_button" />
 
             <com.google.android.material.switchmaterial.SwitchMaterial
                 android:id="@+id/notifications_switch"

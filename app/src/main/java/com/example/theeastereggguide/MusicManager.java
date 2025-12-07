@@ -9,6 +9,7 @@ public class MusicManager {
 
     private static MusicManager instance;
     private MediaPlayer mediaPlayer;
+    private Context context;
     private static final String PREFS_NAME = "Settings";
     private static final String MUSIC_ENABLED_KEY = "music_enabled";
 
@@ -23,8 +24,9 @@ public class MusicManager {
     }
 
     public void initialize(Context context) {
+        this.context = context.getApplicationContext();
         if (mediaPlayer == null) {
-            mediaPlayer = MediaPlayer.create(context.getApplicationContext(), R.raw.app_background_music);
+            mediaPlayer = MediaPlayer.create(this.context, R.raw.damned_boi);
             mediaPlayer.setLooping(true);
         }
         SharedPreferences settings = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
@@ -86,6 +88,23 @@ public class MusicManager {
         }
     }
 
+    public void changeSong(int musicResId) {
+        if (mediaPlayer != null) {
+            if (mediaPlayer.isPlaying()) {
+                mediaPlayer.stop();
+            }
+            mediaPlayer.release();
+        }
+        mediaPlayer = MediaPlayer.create(context, musicResId);
+        if (mediaPlayer != null) {
+            mediaPlayer.setLooping(true);
+            SharedPreferences settings = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+            boolean musicEnabled = settings.getBoolean(MUSIC_ENABLED_KEY, true);
+            if (musicEnabled) {
+                startMusic();
+            }
+        }
+    }
 
     public void releaseMusic() {
         if (mediaPlayer != null) {

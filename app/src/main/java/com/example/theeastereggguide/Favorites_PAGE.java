@@ -42,10 +42,4 @@ public class Favorites_PAGE extends AppCompatActivity {
             return false;
         });
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        MusicManager.getInstance().resumeMusic(this);
-    }
 }

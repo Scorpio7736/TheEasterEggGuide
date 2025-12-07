@@ -75,12 +75,6 @@ public class EasterEgg_Reveal_Page extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        MusicManager.getInstance().resumeMusic(this);
-    }
-
     private EasterEgg getEasterEggObject(String name) {
         if (name == null) return null;
         List<EasterEgg> easterEggs = EasterEgg_Object_Handler.getEasterEggs();

@@ -19,10 +19,4 @@ public class MAIN_PAGE extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        MusicManager.getInstance().resumeMusic(this);
-    }
 }

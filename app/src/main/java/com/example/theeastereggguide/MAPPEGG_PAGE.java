@@ -38,12 +38,6 @@ public class MAPPEGG_PAGE extends AppCompatActivity {
         populateExpandableList(buildablesContent, buildables);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        MusicManager.getInstance().resumeMusic(this);
-    }
-
     private void populateExpandableList(LinearLayout container, ArrayList<ExpandableItem> items) {
         if (items != null) {
             for (ExpandableItem item : items) {
