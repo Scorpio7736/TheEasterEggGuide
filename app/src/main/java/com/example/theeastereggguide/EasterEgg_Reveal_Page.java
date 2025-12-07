@@ -1,6 +1,9 @@
 package com.example.theeastereggguide;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Matrix;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -9,10 +12,22 @@ import java.util.List;
 
 public class EasterEgg_Reveal_Page extends AppCompatActivity {
 
+    private static final String PREFS_NAME = "Settings";
+    private static final String SOUND_ENABLED_KEY = "sound_enabled";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.easter_egg_reveal_page);
+
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        boolean soundEnabled = settings.getBoolean(SOUND_ENABLED_KEY, true);
+
+        if (soundEnabled) {
+            MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.easter_egg_found);
+            mediaPlayer.start();
+            mediaPlayer.setOnCompletionListener(MediaPlayer::release);
+        }
 
         // Get the EasterEgg object from the intent
         String easterEggName = getIntent().getStringExtra("EASTER_EGG_NAME");

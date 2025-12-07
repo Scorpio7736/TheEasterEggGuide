@@ -117,6 +117,7 @@ public class PROFILE_PAGE extends AppCompatActivity {
                 Intent intent = new Intent(this, EasterEgg_Reveal_Page.class);
                 intent.putExtra("EASTER_EGG_NAME", egg.incitementName);
                 startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 return; // Stop further execution
             }
         }
