@@ -52,7 +52,8 @@ public class MusicSettings_PAGE extends AppCompatActivity {
         });
 
         Spinner songChoiceSpinner = findViewById(R.id.song_choice_spinner);
-        ArrayAdapter<Enums.App_Music> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Enums.App_Music.values());
+        ArrayAdapter<Enums.App_Music> adapter = new ArrayAdapter<>(this, R.layout.spinner_item_layout, Enums.App_Music.values());
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         songChoiceSpinner.setAdapter(adapter);
 
         int selectedSongOrdinal = settings.getInt(SELECTED_SONG_KEY, 0);

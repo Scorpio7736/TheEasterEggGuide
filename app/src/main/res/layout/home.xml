@@ -64,6 +64,7 @@
         app:layout_constraintStart_toEndOf="@+id/recommend_map_button"
         app:layout_constraintTop_toTopOf="@+id/recommend_map_button" />
 
+
     <androidx.cardview.widget.CardView
         android:id="@+id/bottom_card_view"
         android:layout_width="0dp"
@@ -87,6 +88,8 @@
             app:itemIconTint="@null"
             app:itemTextColor="@color/bottom_nav_text_color"
             app:menu="@menu/bottom_nav_menu" />
+
+
 
     </androidx.cardview.widget.CardView>
 
