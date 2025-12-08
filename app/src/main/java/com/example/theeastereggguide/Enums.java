@@ -4,6 +4,21 @@ public class Enums {
 
     public enum App_Music
     {
+
+        /*
+
+        Credit for music:
+
+            damned_boiiii.mp3: https://www.youtube.com/watch?v=b4g-twjkQWU&list=RDb4g-twjkQWU&start_radio=1
+            damned_boiii.mp3: https://www.youtube.com/watch?v=KbT-jC9W6KA&list=RDKbT-jC9W6KA&start_radio=1
+            damned_boii.mp3: https://www.youtube.com/watch?v=_4MvHGw62CI&list=RD_4MvHGw62CI&start_radio=1
+            damned_boi.mp3: https://www.youtube.com/watch?v=mdLbVX6bErI&list=RDmdLbVX6bErI&start_radio=1
+
+        Other Audio:
+
+            easter_egg_found.mp3: https://www.youtube.com/watch?v=qfidRRBhFb4
+
+         */
         Damned_Black_Ops_1("Damned Black Ops 1", R.raw.damned_boi),
         Damned_Black_Ops_2("Damned Black Ops 2", R.raw.damned_boii),
         Damned_Black_Ops_3("Damned Black Ops 3", R.raw.damned_boiii),

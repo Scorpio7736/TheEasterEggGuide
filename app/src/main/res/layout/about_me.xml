@@ -49,7 +49,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:text="Discover, explore, and complete every Call of Duty Zombies Easter Egg—all in one app. Browse maps, track quests, and learn step-by-step processes with clean organization and fast navigation. Whether you’re hunting songs, side quests, main quests, or buildables, this guide keeps everything at your fingertips.\n~ [INSERT TEAM NAME]"
+                android:text="Discover, explore, and complete every Call of Duty Zombies Easter Egg—all in one app. Browse maps, track quests, and learn step-by-step processes with clean organization and fast navigation. Whether you’re hunting songs, side quests, main quests, or buildables, this guide keeps everything at your fingertips.
+~ [INSERT TEAM NAME]"
                 android:textColor="@color/CUSTOM_ITEM_text_primary_light" />
 
             <TextView
@@ -65,7 +66,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:autoLink="email"
-                android:text="ugorrc29@uwgb.edu\nlondjc22@uwgb.edu"
+                android:text="ugorrc29@uwgb.edu
+londjc22@uwgb.edu"
                 android:textColor="@color/CUSTOM_ITEM_text_primary_light"
                 android:textColorLink="@color/CUSTOM_ITEM_highlight_light" />
 
@@ -81,7 +83,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:text="• Rick Ugorji – [TITLE]\n• Jack London – [TITLE]"
+                android:text="• Rick Ugorji – [TITLE]
+• Jack London – [TITLE]"
                 android:textColor="@color/CUSTOM_ITEM_text_primary_light"/>
 
             <TextView
@@ -96,8 +99,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:text="We want to give our heartfelt thanks to everyone who supported the creation of The Easter Egg Guide. This app exists thanks to the fans who love Zombies as much as we do, the resources provided at UW–Green Bay, and the collaborative environment that allowed us to grow as developers.\nWe are especially grateful to the Call of Duty Zombies community, whose documentation, passion, and discoveries helped shape this project. We appreciate every creator, guide writer, and player who keeps these maps alive through their dedication and knowledge."
+                android:text="We want to give our heartfelt thanks to everyone who supported the creation of The Easter Egg Guide. This app exists thanks to the fans who love Zombies as much as we do, the resources provided at UW–Green Bay, and the collaborative environment that allowed us to grow as developers.
+We are especially grateful to the Call of Duty Zombies community, whose documentation, passion, and discoveries helped shape this project. We appreciate every creator, guide writer, and player who keeps these maps alive through their dedication and knowledge."
                 android:textColor="@color/CUSTOM_ITEM_text_primary_light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Audio Credits"
+                android:textColor="@color/CUSTOM_ITEM_text_primary_light"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:autoLink="web"
+                android:text="Music:
+Damned by Kevin Sherwood:
+• damned_boiiii.mp3: https://www.youtube.com/watch?v=b4g-twjkQWU
+• damned_boiii.mp3: https://www.youtube.com/watch?v=KbT-jC9W6KA
+• damned_boii.mp3: https://www.youtube.com/watch?v=_4MvHGw62CI
+• damned_boi.mp3: https://www.youtube.com/watch?v=mdLbVX6bErI
+
+Other Audio:
+• easter_egg_found.mp3: https://www.youtube.com/watch?v=qfidRRBhFb4"
+                android:textColor="@color/CUSTOM_ITEM_text_primary_light"
+                android:textColorLink="@color/CUSTOM_ITEM_highlight_light" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -111,7 +140,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:text="We at [GROUP NAME] hold NO copyright over any Call of Duty Zombies assets, ideas, quests, characters, or concepts displayed or referenced in this application.\nAll official content related to Call of Duty, Call of Duty Zombies, and their associated map names, designs, Easter Eggs, characters, and storylines is owned solely by Activision, Treyarch, and their respective rights holders.\nThis app is a fan-made reference guide created for educational and organizational purposes only, and is not affiliated with or endorsed by Activision or Treyarch in any way."
+                android:text="We at [GROUP NAME] hold NO copyright over any Call of Duty Zombies assets, ideas, quests, characters, or concepts displayed or referenced in this application.
+All official content related to Call of Duty, Call of Duty Zombies, and their associated map names, designs, Easter Eggs, characters, and storylines is owned solely by Activision, Treyarch, and their respective rights holders.
+This app is a fan-made reference guide created for educational and organizational purposes only, and is not affiliated with or endorsed by Activision or Treyarch in any way."
                 android:textColor="@color/CUSTOM_ITEM_text_primary_light" />
 
             <TextView
