@@ -2,6 +2,7 @@ package com.example.theeastereggguide;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,8 +33,13 @@ public class Map_Page_Cell {
         mapNameTextView.setText(mapData.getMapName());
         mapCoverImageView.setImageResource(mapData.getMapIcon());
 
+        SharedPreferences sharedPreferences = context.getSharedPreferences("favorites", Context.MODE_PRIVATE);
+        favoriteButton.setChecked(sharedPreferences.getBoolean(map.name(), false));
+
         favoriteButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            // TODO: Handle favorite button state change
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean(map.name(), isChecked);
+            editor.apply();
         });
 
         cellView.setOnClickListener(v -> {
