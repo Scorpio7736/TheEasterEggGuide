@@ -72,7 +72,7 @@ public class SETTINGS_PAGE extends AppCompatActivity {
     private void showWifiMessage(boolean isConnected) {
         new AlertDialog.Builder(this)
                 .setTitle(Wifi_Check_Title)
-                .setMessage(isConnected ? "You are connected to the internet." : "You are not connected to the internet.")
+                .setMessage(isConnected ? R.string.wifi_connected : R.string.wifi_disconnected)
                 .setPositiveButton("OK", null)
                 .show();
     }

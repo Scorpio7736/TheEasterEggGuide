@@ -8,4 +8,6 @@
     <string name="profile_save_button">Save</string>
     <string name="favorites_title">Favorites</string>
     <string name="no_favorites_message">No favorites saved yet!</string>
+    <string name="wifi_connected">You are connected to the internet.</string>
+    <string name="wifi_disconnected">You are not connected to the internet.</string>
 </resources>

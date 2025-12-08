@@ -176,7 +176,6 @@ public class PROFILE_PAGE extends AppCompatActivity {
         editor.putString(BIRTHDAY_KEY, birthdayText.getText().toString());
         editor.putInt(GENDER_KEY, genderSpinner.getSelectedItemPosition());
         editor.putString(ABOUT_KEY, aboutMeEditText.getText().toString());
-        editor.remove(IMAGE_RESOURCE_ID_KEY);
         editor.apply();
         Toast.makeText(this, "Profile Saved!", Toast.LENGTH_SHORT).show();
     }

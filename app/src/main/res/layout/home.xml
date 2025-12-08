@@ -23,6 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/slideshow_card"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -48,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="Recommend Map"
-        app:layout_constraintBottom_toTopOf="@id/bottom_card_view"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_card_view"
         app:layout_constraintEnd_toStartOf="@+id/how_to_play_button"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent" />
@@ -84,12 +85,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
+            app:itemActiveIndicatorStyle="@android:color/transparent"
             app:itemIconSize="36dp"
             app:itemIconTint="@null"
             app:itemTextColor="@color/bottom_nav_text_color"
             app:menu="@menu/bottom_nav_menu" />
-
-
 
     </androidx.cardview.widget.CardView>
 
