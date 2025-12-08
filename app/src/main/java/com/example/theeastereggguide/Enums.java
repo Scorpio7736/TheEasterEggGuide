@@ -12,7 +12,7 @@ public class Enums {
             damned_boiiii.mp3: https://www.youtube.com/watch?v=b4g-twjkQWU&list=RDb4g-twjkQWU&start_radio=1
             damned_boiii.mp3: https://www.youtube.com/watch?v=KbT-jC9W6KA&list=RDKbT-jC9W6KA&start_radio=1
             damned_boii.mp3: https://www.youtube.com/watch?v=_4MvHGw62CI&list=RD_4MvHGw62CI&start_radio=1
-            damned_boi.mp3: https://www.youtube.com/watch?v=mdLbVX6bErI&list=RDmdLbVX6bErI&start_radio=1
+            damned_boi.mp3: https://www.youtube.com/watch?v=apBWd1FLK9s&list=RDapBWd1FLK9s&start_radio=1
 
         Other Audio:
 
