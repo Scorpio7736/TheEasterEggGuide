@@ -1,6 +1,38 @@
 package com.example.theeastereggguide;
 
-public class Enums {
+public class Enums
+{
+
+    public enum Map_Trailer
+    {
+
+        /*
+
+            Credit for Videos:
+                Nact WAW: https://www.youtube.com/watch?v=puEpEIjatXY
+
+         */
+        Nacht_der_Untoten_WAW("Nacht der Untoten", R.raw.nacht_trailer);
+
+
+        private final String displayName;
+        private final int trailerResId;
+
+        Map_Trailer(String displayName, int trailerResId) {
+            this.displayName = displayName;
+            this.trailerResId = trailerResId;
+        }
+
+        @Override
+        public String toString() {
+            return displayName;
+        }
+
+        public int getTrailerResId() {
+            return trailerResId;
+        }
+
+    }
 
     public enum App_Music
     {
