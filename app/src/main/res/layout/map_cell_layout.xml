@@ -22,6 +22,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ToggleButton
+            android:id="@+id/favorite_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/heart_checkbox_selector"
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/map_name_text"
             android:layout_width="0dp"
@@ -29,7 +40,7 @@
             android:gravity="center"
             android:maxLines="2"
             android:paddingStart="12dp"
-            android:paddingTop="8dp"
+            android.paddingTop="8dp"
             android:paddingEnd="12dp"
             android:paddingBottom="8dp"
             android:text="Map Name"

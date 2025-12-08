@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import java.io.Serializable;
 
@@ -25,10 +26,15 @@ public class Map_Page_Cell {
 
         TextView mapNameTextView = cellView.findViewById(R.id.map_name_text);
         ImageView mapCoverImageView = cellView.findViewById(R.id.map_cover_image);
+        ToggleButton favoriteButton = cellView.findViewById(R.id.favorite_button);
 
         Map_OBJECT mapData = mapsObjectHandler.getMapObject(map);
         mapNameTextView.setText(mapData.getMapName());
         mapCoverImageView.setImageResource(mapData.getMapIcon());
+
+        favoriteButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            // TODO: Handle favorite button state change
+        });
 
         cellView.setOnClickListener(v -> {
             Intent intent = new Intent(context, MAPPEGG_PAGE.class);
