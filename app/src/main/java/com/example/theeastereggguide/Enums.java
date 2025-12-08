@@ -5,8 +5,8 @@ public class Enums {
     public enum App_Music
     {
         Damned_Black_Ops_1("Damned Black Ops 1", R.raw.easter_egg_found),
-        Damned_Black_Ops_2("Damned Black Ops 2", R.raw.easter_egg_found),
-        Damned_Black_Ops_3("Damned Black Ops 3", R.raw.damned_boi),
+        Damned_Black_Ops_2("Damned Black Ops 2", R.raw.damned_boii),
+        Damned_Black_Ops_3("Damned Black Ops 3", R.raw.easter_egg_found),
         Damned_Black_Ops_4("Damned Black Ops 4", R.raw.easter_egg_found);
 
         private final String displayName;

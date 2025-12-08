@@ -26,7 +26,7 @@ public class MusicManager {
     public void initialize(Context context) {
         this.context = context.getApplicationContext();
         if (mediaPlayer == null) {
-            mediaPlayer = MediaPlayer.create(this.context, R.raw.damned_boi);
+            mediaPlayer = MediaPlayer.create(this.context, R.raw.damned_boii);
             mediaPlayer.setLooping(true);
         }
         SharedPreferences settings = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
