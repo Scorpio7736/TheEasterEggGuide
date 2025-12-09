@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import androidx.annotation.Nullable;
+
 import java.io.Serializable;
 
 public class Map_Page_Cell {
@@ -21,7 +23,12 @@ public class Map_Page_Cell {
         this.map = map;
     }
 
+    // Overloaded method for simplicity when no refresh action is needed
     public View createView(Context context, ViewGroup parent) {
+        return createView(context, parent, null);
+    }
+
+    public View createView(Context context, ViewGroup parent, @Nullable Runnable onFavoriteChanged) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View cellView = inflater.inflate(R.layout.map_cell_layout, parent, false);
 
@@ -40,6 +47,11 @@ public class Map_Page_Cell {
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putBoolean(map.name(), isChecked);
             editor.apply();
+
+            // If a refresh action was provided, run it
+            if (onFavoriteChanged != null) {
+                onFavoriteChanged.run();
+            }
         });
 
         cellView.setOnClickListener(v -> {

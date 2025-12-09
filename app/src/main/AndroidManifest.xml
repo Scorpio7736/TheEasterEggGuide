@@ -29,7 +29,8 @@
         <activity android:name=".SETTINGS_PAGE" />
         <activity android:name=".ABOUT_ME_PAGE" />
         <activity android:name=".PROFILE_PAGE" />
-        <activity android:name=".Favorites_PAGE" />
+        <activity android:name=".Favorites_PAGE"
+            android:exported="false" />
         <activity android:name=".EasterEgg_Reveal_Page" />
         <activity android:name=".MusicSettings_PAGE" />
     </application>
