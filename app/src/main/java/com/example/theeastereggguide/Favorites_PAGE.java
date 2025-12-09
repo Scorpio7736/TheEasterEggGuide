@@ -9,6 +9,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Favorites_PAGE extends AppCompatActivity {
 
     private GridLayout favoritesContainer;
@@ -59,21 +62,33 @@ public class Favorites_PAGE extends AppCompatActivity {
     private void displayFavoriteMaps() {
         favoritesContainer.removeAllViews();
         SharedPreferences sharedPreferences = getSharedPreferences("favorites", MODE_PRIVATE);
-        boolean hasFavorites = false;
 
+        List<Enums.COD_MAP> favoriteMaps = new ArrayList<>();
         for (Enums.COD_MAP map : Enums.COD_MAP.values()) {
             if (sharedPreferences.getBoolean(map.name(), false)) {
-                hasFavorites = true;
-                Map_Page_Cell mapCell = new Map_Page_Cell(map);
-                // When a favorite is toggled on this page, refresh the display
-                View cellView = mapCell.createView(this, favoritesContainer, this::displayFavoriteMaps);
-                favoritesContainer.addView(cellView);
+                favoriteMaps.add(map);
             }
         }
 
-        if (hasFavorites) {
+        if (!favoriteMaps.isEmpty()) {
             noFavoritesText.setVisibility(View.GONE);
             favoritesContainer.setVisibility(View.VISIBLE);
+
+            for (Enums.COD_MAP map : favoriteMaps) {
+                Map_Page_Cell mapCell = new Map_Page_Cell(map);
+                View cellView = mapCell.createView(this, favoritesContainer, this::displayFavoriteMaps);
+                favoritesContainer.addView(cellView);
+            }
+
+            // If there's an odd number of favorites, add a dummy view to balance the layout
+            if (favoriteMaps.size() % 2 != 0) {
+                android.widget.Space dummyView = new android.widget.Space(this);
+                GridLayout.LayoutParams params = new GridLayout.LayoutParams();
+                params.width = 0;
+                params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f);
+                dummyView.setLayoutParams(params);
+                favoritesContainer.addView(dummyView);
+            }
         } else {
             noFavoritesText.setVisibility(View.VISIBLE);
             favoritesContainer.setVisibility(View.GONE);
