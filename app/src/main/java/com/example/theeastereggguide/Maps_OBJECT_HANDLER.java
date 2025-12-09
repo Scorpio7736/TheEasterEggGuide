@@ -1,6 +1,7 @@
 package com.example.theeastereggguide;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,5 +28,9 @@ public class Maps_OBJECT_HANDLER {
 
     public Map_OBJECT getMapObject(Enums.COD_MAP map) {
         return mapObjects.get(map);
+    }
+
+    public Collection<Map_OBJECT> getAllMaps() {
+        return mapObjects.values();
     }
 }
