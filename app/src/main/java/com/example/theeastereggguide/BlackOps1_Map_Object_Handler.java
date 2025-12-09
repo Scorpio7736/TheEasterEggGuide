@@ -50,7 +50,8 @@ public class BlackOps1_Map_Object_Handler {
                         R.drawable.moon_boi,
                         moonMainQuest,
                         moonSideQuests,
-                        new ArrayList<>()
+                        new ArrayList<>(),
+                        "https://www.youtube.com/watch?v=2k8V7fF7v7s&rco=1"
                 )
         );
 
@@ -121,7 +122,8 @@ public class BlackOps1_Map_Object_Handler {
                         R.drawable.shangrila_boi,
                         shangriLaMainQuest,
                         shangriLaSideQuests,
-                        new ArrayList<>()
+                        new ArrayList<>(),
+                        "https://www.youtube.com/watch?v=Z34RTO2BKM4&rco=1"
                 )
         );
 
@@ -214,7 +216,8 @@ public class BlackOps1_Map_Object_Handler {
                         R.drawable.kinodertoten_boi,
                         kinoMainQuest,
                         kinoSideQuests,
-                        new ArrayList<>()
+                        new ArrayList<>(),
+                        "https://www.youtube.com/watch?v=B7b6EkTNOPA&list=RDB7b6EkTNOPA&rco=1"
                 )
         );
 
@@ -293,7 +296,8 @@ public class BlackOps1_Map_Object_Handler {
                         R.drawable.five_boi,
                         new ArrayList<>(),
                         fiveSideQuests,
-                        fiveBuildables
+                        fiveBuildables,
+                        "https://www.youtube.com/watch?v=D2dZeXxkJr8"
                 )
         );
 
@@ -404,7 +408,8 @@ public class BlackOps1_Map_Object_Handler {
                         R.drawable.ascension_boi,
                         ascensionMainQuest,
                         ascensionSideQuests,
-                        ascensionBuildables
+                        ascensionBuildables,
+                        "https://www.youtube.com/watch?v=p8IT1p3xXOU"
                 )
         );
 
@@ -522,7 +527,8 @@ public class BlackOps1_Map_Object_Handler {
                         R.drawable.cotd_boi,
                         cotdMainQuest,
                         cotdSideQuests,
-                        cotdBuildables
+                        cotdBuildables,
+                        "https://www.youtube.com/watch?v=42dIAt2-VpM"
                 )
         );
 
@@ -618,7 +624,8 @@ public class BlackOps1_Map_Object_Handler {
                         R.drawable.deadopsarcade_boi,
                         new ArrayList<>(),
                         doaSideQuests,
-                        doaBuildables
+                        doaBuildables,
+                        "https://www.youtube.com/watch?v=5krOwJ3bAJw"
                 )
         );
 

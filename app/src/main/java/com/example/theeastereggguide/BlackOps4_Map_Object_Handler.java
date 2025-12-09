@@ -33,7 +33,8 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.ix_boiiii,
                         ixMainQuest,
                         ixSideQuests,
-                        ixBuildables
+                        ixBuildables,
+                        "https://www.youtube.com/watch?v=Vi-FfUSUaAM&rco=1"
                 )
         );
 
@@ -59,7 +60,8 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.voyageofdespair_boiiii,
                         vodMainQuest,
                         vodSideQuests,
-                        vodBuildables
+                        vodBuildables,
+                        "https://www.youtube.com/watch?v=ffvg7cR68-Q&rco=1"
                 )
         );
 
@@ -85,7 +87,8 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.botd_boiiii,
                         botdMainQuest,
                         botdSideQuests,
-                        botdBuildables
+                        botdBuildables,
+                        "https://www.youtube.com/watch?v=lNSL5IbA_4Y&rco=1"
                 )
         );
 
@@ -111,7 +114,8 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.classified_boiiii,
                         classifiedMainQuest,
                         classifiedSideQuests,
-                        classifiedBuildables
+                        classifiedBuildables,
+                        "https://www.youtube.com/watch?v=Qo5r89mlnh0"
                 )
         );
 
@@ -137,7 +141,8 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.dotn_boiiii,
                         dotnMainQuest,
                         dotnSideQuests,
-                        dotnBuildables
+                        dotnBuildables,
+                        "https://www.youtube.com/watch?v=ISZs847uoMg"
                 )
         );
 
@@ -163,7 +168,8 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.ancientevil_boiiii,
                         aeMainQuest,
                         aeSideQuests,
-                        aeBuildables
+                        aeBuildables,
+                        "https://www.youtube.com/watch?v=8ClZC3GDU6w&rco=1"
                 )
         );
 
@@ -189,7 +195,8 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.alphaomega_boiiii,
                         aoMainQuest,
                         aoSideQuests,
-                        aoBuildables
+                        aoBuildables,
+                        "https://www.youtube.com/watch?v=0q0ZZXrErf8"
                 )
         );
 
@@ -215,7 +222,8 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.tagdertoten_boiiii,
                         tdtMainQuest,
                         tdtSideQuests,
-                        tdtBuildables
+                        tdtBuildables,
+                        "https://www.youtube.com/watch?v=fYou_KHcvbQ"
                 )
         );
 
@@ -241,7 +249,8 @@ public class BlackOps4_Map_Object_Handler {
                         R.drawable.deadopsarcade_boiiii,
                         doa3MainQuest,
                         doa3SideQuests,
-                        doa3Buildables
+                        doa3Buildables,
+                        "https://www.youtube.com/watch?v=U7fYWjejJYk"
                 )
         );
 

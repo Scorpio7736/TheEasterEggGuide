@@ -146,7 +146,8 @@ public class BlackOps2_Map_Object_Handler
                         R.drawable.tranzit_boii,
                         tranzitMainQuest,
                         tranzitSideQuests,
-                        tranzitBuildables
+                        tranzitBuildables,
+                        "https://www.youtube.com/watch?v=YH_9GzaUW40&rco=1"
                 )
         );
 
@@ -215,7 +216,8 @@ public class BlackOps2_Map_Object_Handler
                         R.drawable.town_boii,
                         townMain,
                         townSideQuests,
-                        townBuildables
+                        townBuildables,
+                        "https://www.youtube.com/watch?v=YH_9GzaUW40&rco=1"
                 )
         );
 
@@ -274,7 +276,8 @@ public class BlackOps2_Map_Object_Handler
                         R.drawable.farm_boii,
                         farmMain,
                         farmSideQuests,
-                        farmBuildables
+                        farmBuildables,
+                        "https://www.youtube.com/watch?v=YH_9GzaUW40&rco=1"
                 )
         );
 
@@ -333,7 +336,8 @@ public class BlackOps2_Map_Object_Handler
                         R.drawable.busdepot_boii,
                         busDepotMain,
                         busDepotSideQuests,
-                        busDepotBuildables
+                        busDepotBuildables,
+                        "https://www.youtube.com/watch?v=YH_9GzaUW40&rco=1"
                 )
         );
 
@@ -422,7 +426,8 @@ public class BlackOps2_Map_Object_Handler
                         R.drawable.nuketown_boii,
                         nuketownMain,
                         nuketownSideQuests,
-                        nuketownBuildables
+                        nuketownBuildables,
+                        "https://www.youtube.com/watch?v=zzaVSj0omXo&rco=1"
                 )
         );
 
@@ -534,7 +539,8 @@ public class BlackOps2_Map_Object_Handler
                         R.drawable.dierise_boii,
                         dieRiseMainQuest,
                         dieRiseSideQuests,
-                        dieRiseBuildables
+                        dieRiseBuildables,
+                        "https://www.youtube.com/watch?v=lrLQiF68mIk"
                 )
         );
 
@@ -655,7 +661,8 @@ public class BlackOps2_Map_Object_Handler
                         R.drawable.motd_boii,
                         motdMainQuest,
                         motdSideQuests,
-                        motdBuildables
+                        motdBuildables,
+                        "https://www.youtube.com/watch?v=I71tnZDIR4M&rco=1"
                 )
         );
 
@@ -785,7 +792,8 @@ public class BlackOps2_Map_Object_Handler
                         R.drawable.buried_boii,
                         buriedMainQuest,
                         buriedSideQuests,
-                        buriedBuildables
+                        buriedBuildables,
+                        "https://www.youtube.com/watch?v=BwU7FR0uaaY&rco=1"
                 )
         );
 
@@ -916,7 +924,8 @@ public class BlackOps2_Map_Object_Handler
                         R.drawable.origins_boii,
                         originsMainQuest,
                         originsSideQuests,
-                        originsBuildables
+                        originsBuildables,
+                        "https://www.youtube.com/watch?v=TS701bMxmSI&rco=1"
                 )
         );
 

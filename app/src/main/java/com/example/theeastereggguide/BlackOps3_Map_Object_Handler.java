@@ -128,7 +128,8 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.soe_boiii,
                         soeMainQuest,
                         soeSideQuests,
-                        soeBuildables
+                        soeBuildables,
+                        "https://www.youtube.com/watch?v=kdLqsWDl16c&rco=1"
                 )
         );
 
@@ -236,7 +237,8 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.thegiant_boiii,
                         giantMainQuest,
                         giantSideQuests,
-                        giantBuildables
+                        giantBuildables,
+                        "https://www.youtube.com/watch?v=Y9styqi7r0M&rco=1"
                 )
         );
 
@@ -374,7 +376,8 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.de_boiii,
                         deMainQuest,
                         deSideQuests,
-                        deBuildables
+                        deBuildables,
+                        "https://www.youtube.com/watch?v=zOMds3dyjkc&rco=1"
                 )
         );
 
@@ -512,7 +515,8 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.zetsubounoshima_boiii,
                         znsMainQuest,
                         znsSideQuests,
-                        znsBuildables
+                        znsBuildables,
+                        "https://www.youtube.com/watch?v=qFe5u5JFt_g&rco=1"
                 )
         );
 
@@ -650,7 +654,8 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.gorodkrovi_boiii,
                         gkMainQuest,
                         gkSideQuests,
-                        gkBuildables
+                        gkBuildables,
+                        "https://www.youtube.com/watch?v=mcGTLwiy4uE&rco=1"
                 )
         );
 
@@ -788,7 +793,8 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.revelations_boiii,
                         revMainQuest,
                         revSideQuests,
-                        revBuildables
+                        revBuildables,
+                        "https://www.youtube.com/watch?v=BYVnGQ1Xlls&list=RDBYVnGQ1Xlls&rco=1"
                 )
         );
 
@@ -867,7 +873,8 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.nacht_boiii,
                         nachtZcMainQuest,
                         nachtZcSideQuests,
-                        nachtZcBuildables
+                        nachtZcBuildables,
+                        "https://www.youtube.com/watch?v=Ni3pi3PJJvM&rco=1"
                 )
         );
 
@@ -946,7 +953,8 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.verruckt_boiii,
                         verrucktZcMainQuest,
                         verrucktZcSideQuests,
-                        verrucktZcBuildables
+                        verrucktZcBuildables,
+                        "https://www.youtube.com/watch?v=Ni3pi3PJJvM&rco=1"
                 )
         );
 
@@ -1025,7 +1033,8 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.shinonuma_boiii,
                         shiNoNumaZcMainQuest,
                         shiNoNumaZcSideQuests,
-                        shiNoNumaZcBuildables
+                        shiNoNumaZcBuildables,
+                        "https://www.youtube.com/watch?v=Ni3pi3PJJvM&rco=1"
                 )
         );
 
@@ -1104,7 +1113,8 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.kinodertoten_boiii,
                         kinoZcMainQuest,
                         kinoZcSideQuests,
-                        kinoZcBuildables
+                        kinoZcBuildables,
+                        "https://www.youtube.com/watch?v=Ni3pi3PJJvM&rco=1"
                 )
         );
 
@@ -1192,7 +1202,8 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.ascension_boiii,
                         ascensionZcMainQuest,
                         ascensionZcSideQuests,
-                        ascensionZcBuildables
+                        ascensionZcBuildables,
+                        "https://www.youtube.com/watch?v=Ni3pi3PJJvM&rco=1"
                 )
         );
 
@@ -1280,7 +1291,8 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.shangrila_boiii,
                         shangriLaZcMainQuest,
                         shangriLaZcSideQuests,
-                        shangriLaZcBuildables
+                        shangriLaZcBuildables,
+                        "https://www.youtube.com/watch?v=Ni3pi3PJJvM&rco=1"
                 )
         );
 
@@ -1368,7 +1380,8 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.moon_boiii,
                         moonZcMainQuest,
                         moonZcSideQuests,
-                        moonZcBuildables
+                        moonZcBuildables,
+                        "https://www.youtube.com/watch?v=Ni3pi3PJJvM&rco=1"
                 )
         );
 
@@ -1506,7 +1519,8 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.origins_boii,
                         originsZcMainQuest,
                         originsZcSideQuests,
-                        originsZcBuildables
+                        originsZcBuildables,
+                        "https://www.youtube.com/watch?v=Ni3pi3PJJvM&rco=1"
                 )
         );
 
@@ -1644,7 +1658,8 @@ public class BlackOps3_Map_Object_Handler {
                         R.drawable.deadopsarcade_boiii,
                         doa2MainQuest,
                         doa2SideQuests,
-                        doa2Buildables
+                        doa2Buildables,
+                        "https://www.youtube.com/watch?v=HPYHiGRX-sw"
                 )
         );
 
