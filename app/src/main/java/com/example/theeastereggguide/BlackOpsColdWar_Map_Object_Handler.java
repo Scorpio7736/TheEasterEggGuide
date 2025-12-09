@@ -33,7 +33,8 @@ public class BlackOpsColdWar_Map_Object_Handler {
                         R.drawable.diemachine_bocw,
                         dieMaschineMainQuest,
                         dieMaschineSideQuests,
-                        dieMaschineBuildables
+                        dieMaschineBuildables,
+                        "https://www.youtube.com/watch?v=Qua2QEFCBm8&rco=1"
                 )
         );
 
@@ -59,7 +60,8 @@ public class BlackOpsColdWar_Map_Object_Handler {
                         R.drawable.firebasez_bocw,
                         firebaseZMainQuest,
                         firebaseZSideQuests,
-                        firebaseZBuildables
+                        firebaseZBuildables,
+                        "https://www.youtube.com/watch?v=JlfZYX78h_s&rco=1"
                 )
         );
 
@@ -85,7 +87,8 @@ public class BlackOpsColdWar_Map_Object_Handler {
                         R.drawable.mauerdertoten_bocw,
                         mfsTooMainQuest,
                         mfsTooSideQuests,
-                        mfsTooBuildables
+                        mfsTooBuildables,
+                        "https://www.youtube.com/watch?v=SVlPoS8b08Q"
                 )
         );
 
@@ -111,7 +114,8 @@ public class BlackOpsColdWar_Map_Object_Handler {
                         R.drawable.forsaken_bocw,
                         forsakenMainQuest,
                         forsakenSideQuests,
-                        forsakenBuildables
+                        forsakenBuildables,
+                        "https://www.youtube.com/watch?v=3lXcetccN8o"
                 )
         );
 

@@ -20,7 +20,7 @@ public class Maps_OBJECT_HANDLER {
             if (!mapObjects.containsKey(map)) {
                 ArrayList<ExpandableItem> defaultMainQuest = new ArrayList<>();
                 defaultMainQuest.add(new ExpandableItem("None", new ArrayList<>()));
-                mapObjects.put(map, new Map_OBJECT(map.toString(), R.drawable.zombierichtofen_bk, defaultMainQuest, new ArrayList<>(), new ArrayList<>()));
+                mapObjects.put(map, new Map_OBJECT(map.toString(), R.drawable.zombierichtofen_bk, defaultMainQuest, new ArrayList<>(), new ArrayList<>(), ""));
             }
         }
     }

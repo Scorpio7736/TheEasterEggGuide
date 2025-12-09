@@ -42,7 +42,8 @@ public class WorldAtWar_Map_Object_Handler {
                         R.drawable.nacht_waw,
                         nachtMainQuest,
                         nachtSideQuests,
-                        new ArrayList<>()
+                        new ArrayList<>(),
+                        "https://www.youtube.com/watch?v=puEpEIjatXY"
                 )
         );
 
@@ -79,7 +80,8 @@ public class WorldAtWar_Map_Object_Handler {
                         R.drawable.verruckt_waw,
                         verrucktMainQuest,
                         verrucktSideQuests,
-                        new ArrayList<>()
+                        new ArrayList<>(),
+                        "https://www.youtube.com/watch?v=cvArR7CFXLs"
                 )
         );
 
@@ -123,7 +125,8 @@ public class WorldAtWar_Map_Object_Handler {
                         R.drawable.shinonuma_waw,
                         shiNoNumaMainQuest,
                         shiNoNumaSideQuests,
-                        new ArrayList<>()
+                        new ArrayList<>(),
+                        "https://www.youtube.com/watch?v=Udac9hVyb48"
                 )
         );
 
@@ -179,7 +182,8 @@ public class WorldAtWar_Map_Object_Handler {
                         R.drawable.derreise_waw,
                         derRieseMainQuest,
                         derRieseSideQuests,
-                        new ArrayList<>()
+                        new ArrayList<>(),
+                        "https://www.youtube.com/watch?v=SAIZ6dNNI3U"
                 )
         );
 

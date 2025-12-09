@@ -10,18 +10,22 @@ public class Map_OBJECT {
     private ArrayList<ExpandableItem> sideQuests;
     private ArrayList<ExpandableItem> buildables;
 
+    private String mapTrailerLink;
+
     public Map_OBJECT() {
         this.mainQuest = new ArrayList<>();
         this.sideQuests = new ArrayList<>();
         this.buildables = new ArrayList<>();
+        this.mapTrailerLink = "";
     }
 
-    public Map_OBJECT(String mapName, int mapIcon, ArrayList<ExpandableItem> mainQuest, ArrayList<ExpandableItem> sideQuests, ArrayList<ExpandableItem> buildables) {
+    public Map_OBJECT(String mapName, int mapIcon, ArrayList<ExpandableItem> mainQuest, ArrayList<ExpandableItem> sideQuests, ArrayList<ExpandableItem> buildables, String mapTrailerLink) {
         this.mapName = mapName;
         this.mapIcon = mapIcon;
         this.mainQuest = mainQuest;
         this.sideQuests = sideQuests;
         this.buildables = buildables;
+        this.mapTrailerLink = mapTrailerLink;
     }
 
     public String getMapName() {
