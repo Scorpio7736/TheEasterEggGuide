@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="light_gray_background">#F5F5F5</color>
-    <color name="primary_blue">#0D47A1</color>
-    <color name="dark_blue">#002171</color>
-
-    <!-- Call of Duty Zombies Palette -->
-
-    <!-- Background Shades -->
-    <color name="CUSTOM_ITEM_background_dark">#161716</color>      <!-- Near Black -->
-    <color name="CUSTOM_ITEM_background_light">#1E1E1E</color>     <!-- Charcoal Black -->
-
-    <!-- Text / Glow Colors -->
-    <color name="CUSTOM_ITEM_text_primary_light">#9EDEDD</color>   <!-- Bright Cyan -->
-    <color name="CUSTOM_ITEM_text_secondary_light">#5BA0A5</color> <!-- Medium Cyan -->
-    <color name="CUSTOM_ITEM_text_shadow_dark">#2B4446</color>     <!-- Dim Cyan -->
-
-    <!-- Highlight / FX Colors -->
-    <color name="CUSTOM_ITEM_highlight_light">#9EDEDD</color>      <!-- UI Glow Highlight -->
-    <color name="CUSTOM_ITEM_highlight_dark">#377D82</color>       <!-- Deep Teal Glow -->
-
-    <!-- Accent Metals -->
-    <color name="CUSTOM_ITEM_accent_copper_dark">#724D32</color>   <!-- Burnt Copper -->
-    <color name="CUSTOM_ITEM_accent_bronze_dark">#443227</color>   <!-- Dark Bronze -->
-
-    <!-- Utility Colors (optional) -->
-    <color name="CUSTOM_ITEM_glow_core_light">#9EDEDD</color>
-    <color name="CUSTOM_ITEM_foreground_dark">#2B4446</color>
-
+    <color name="CUSTOM_ITEM_background_dark">#1C1C1C</color>
+    <color name="CUSTOM_ITEM_background_light">#2B2B2B</color>
+    <color name="CUSTOM_ITEM_text_primary_light">#FFFFFF</color>
+    <color name="CUSTOM_ITEM_text_secondary_light">#B3B3B3</color>
+    <color name="semi_transparent_background">#80000000</color>
+    <color name="primary_blue">#FF33B5E5</color>
+    <color name="dark_blue">#FF0099CC</color>
+    <color name="light_gray_background">#FFF3F3F3</color>
+    <color name="CUSTOM_ITEM_accent_bronze_dark">#A0522D</color>
+    <color name="CUSTOM_ITEM_accent_copper_dark">#B87333</color>
+    <color name="CUSTOM_ITEM_highlight_dark">#404040</color>
+    <color name="CUSTOM_ITEM_highlight_light">#D3D3D3</color>
 </resources>

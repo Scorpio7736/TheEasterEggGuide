@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -65,6 +66,13 @@ public class HOME_PAGE extends AppCompatActivity {
                 sliderHandler.removeCallbacks(sliderRunnable);
                 sliderHandler.postDelayed(sliderRunnable, 10000); // 10 seconds delay
             }
+        });
+
+        Button recommendMapButton = findViewById(R.id.recommend_map_button);
+        recommendMapButton.setOnClickListener(v -> {
+            Intent intent = new Intent(HOME_PAGE.this, MapRecomend_PAGE.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_up, R.anim.stay);
         });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);

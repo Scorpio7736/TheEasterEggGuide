@@ -1,12 +1,17 @@
 package com.example.theeastereggguide;
 
+import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -18,10 +23,16 @@ import android.widget.Toast;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -41,6 +52,7 @@ public class PROFILE_PAGE extends AppCompatActivity {
     private TextView birthdayText;
     private Spinner genderSpinner;
     private SharedPreferences sharedPreferences;
+    private Uri photoURI;
 
     private final ActivityResultLauncher<Intent> galleryLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
@@ -60,8 +72,32 @@ public class PROFILE_PAGE extends AppCompatActivity {
                 }
             });
 
+    private final ActivityResultLauncher<Intent> cameraLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if (result.getResultCode() == Activity.RESULT_OK) {
+                    profileImage.setImageURI(photoURI);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString(IMAGE_URI_KEY, photoURI.toString());
+                    editor.remove(IMAGE_RESOURCE_ID_KEY);
+                    editor.apply();
+                }
+            });
+
+    private final ActivityResultLauncher<String> requestPermissionLauncher = registerForActivityResult(
+            new ActivityResultContracts.RequestPermission(),
+            isGranted -> {
+                if (isGranted) {
+                    dispatchTakePictureIntent();
+                } else {
+                    Toast.makeText(this, "Camera permission is required to take a photo.", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_page);
 
@@ -75,12 +111,7 @@ public class PROFILE_PAGE extends AppCompatActivity {
         Button saveButton = findViewById(R.id.save_button);
         Button cancelButton = findViewById(R.id.cancel_button);
 
-        profileImage.setOnClickListener(v -> {
-            Intent galleryIntent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-            galleryIntent.addCategory(Intent.CATEGORY_OPENABLE);
-            galleryIntent.setType("image/*");
-            galleryLauncher.launch(galleryIntent);
-        });
+        profileImage.setOnClickListener(v -> showImagePickerDialog());
 
         birthdayText.setOnClickListener(v -> {
             final Calendar c = Calendar.getInstance();
@@ -136,7 +167,88 @@ public class PROFILE_PAGE extends AppCompatActivity {
         });
     }
 
-    private void EggListener() {
+    private void showImagePickerDialog()
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Select Profile Picture");
+        builder.setItems(new CharSequence[]{"Take Photo", "Choose from Gallery"},
+                (dialog, which) -> {
+                    switch (which) {
+                        case 0:
+                            if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                                    == PackageManager.PERMISSION_GRANTED) {
+                                dispatchTakePictureIntent();
+                            } else {
+                                requestPermissionLauncher.launch(Manifest.permission.CAMERA);
+                            }
+                            break;
+                        case 1:
+                            Intent galleryIntent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+                            galleryIntent.addCategory(Intent.CATEGORY_OPENABLE);
+                            galleryIntent.setType("image/*");
+                            galleryLauncher.launch(galleryIntent);
+                            break;
+                    }
+                });
+        builder.show();
+    }
+
+    private void dispatchTakePictureIntent()
+    {
+        String PAGE_TAG = "PROFILE_PAGE";
+        String ERROR_MESSAGE = "Error creating image file";
+        String FILE_ERROR = "FileProvider Error:";
+        String FILE_CONFIG_ERROR = "FileProvider error. Please check your configuration.";
+        String CAMERA_NOT_FOUND = "No camera app found.";
+
+
+
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            File photoFile = null;
+            try {
+                photoFile = createImageFile();
+            } catch (IOException ex) {
+                Log.e(PAGE_TAG, ERROR_MESSAGE, ex);
+                Toast.makeText(this, ERROR_MESSAGE, Toast.LENGTH_SHORT).show();
+                return; // Return if file creation fails
+            }
+            if (photoFile != null) {
+                try {
+                    photoURI = FileProvider.getUriForFile(this,
+                            "com.example.theeastereggguide.provider",
+                            photoFile);
+                    takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+                    cameraLauncher.launch(takePictureIntent);
+                } catch (IllegalArgumentException e) {
+                    Log.e(PAGE_TAG, FILE_ERROR + e.getMessage());
+                    Toast.makeText(this, FILE_CONFIG_ERROR, Toast.LENGTH_LONG).show();
+                }
+            }
+        } else {
+            Toast.makeText(this, CAMERA_NOT_FOUND, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private File createImageFile() throws IOException
+    {
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String imageFileName = "JPEG_" + timeStamp + "_";
+        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        File image = File.createTempFile(
+                imageFileName,  /* prefix */
+                ".jpg",         /* suffix */
+                storageDir      /* directory */
+        );
+        return image;
+    }
+
+    private void EggListener()
+    {
+        String WAW_RELEASE_DATE = "11/11/2008";
+        String EGG_TAG = "EASTER_EGG_NAME";
+
+
         String username = nameEditText.getText().toString().trim();
         List<EasterEgg> easterEggs = EasterEgg_Object_Handler.getEasterEggs();
 
@@ -144,7 +256,7 @@ public class PROFILE_PAGE extends AppCompatActivity {
             if (username.equalsIgnoreCase(egg.getIncitementName())) {
                 nameEditText.setText(egg.getFullName());
                 aboutMeEditText.setText(egg.getAffiliation());
-                birthdayText.setText("11/11/2008"); // Call of Duty: World at War release date
+                birthdayText.setText(WAW_RELEASE_DATE);
                 profileImage.setImageResource(egg.getImageResourceId());
 
                 SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -159,7 +271,7 @@ public class PROFILE_PAGE extends AppCompatActivity {
                 MediaPlayer.create(this, R.raw.easter_egg_found).start();
 
                 Intent intent = new Intent(this, EasterEgg_Reveal_Page.class);
-                intent.putExtra("EASTER_EGG_NAME", egg.getIncitementName());
+                intent.putExtra(EGG_TAG, egg.getIncitementName());
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 return; // Stop further execution
@@ -170,23 +282,34 @@ public class PROFILE_PAGE extends AppCompatActivity {
         saveData();
     }
 
-    private void saveData() {
+    private void saveData()
+    {
+        String TOAST_MSG = "Profile Saved!";
+
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(NAME_KEY, nameEditText.getText().toString());
         editor.putString(BIRTHDAY_KEY, birthdayText.getText().toString());
         editor.putInt(GENDER_KEY, genderSpinner.getSelectedItemPosition());
         editor.putString(ABOUT_KEY, aboutMeEditText.getText().toString());
         editor.apply();
-        Toast.makeText(this, "Profile Saved!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, TOAST_MSG, Toast.LENGTH_SHORT).show();
     }
 
-    private void loadData() {
-        try {
-            nameEditText.setText(sharedPreferences.getString(NAME_KEY, ""));
-            birthdayText.setText(sharedPreferences.getString(BIRTHDAY_KEY, "Select Birthday"));
-            genderSpinner.setSelection(sharedPreferences.getInt(GENDER_KEY, 0));
-            aboutMeEditText.setText(sharedPreferences.getString(ABOUT_KEY, ""));
+    private void loadData()
+    {
+        String DEFAULT_NAME = "";
+        String BIRTHDAY_TITLE = "Select Birthday";
+        int DEFAULT_GENDER = 0;
+        String DEFAULT_ABOUT = "";
+        String PAGE_TAG = "PROFILE_PAGE";
 
+
+
+        try {
+            nameEditText.setText(sharedPreferences.getString(NAME_KEY, DEFAULT_NAME));
+            birthdayText.setText(sharedPreferences.getString(BIRTHDAY_KEY, BIRTHDAY_TITLE));
+            genderSpinner.setSelection(sharedPreferences.getInt(GENDER_KEY, DEFAULT_GENDER));
+            aboutMeEditText.setText(sharedPreferences.getString(ABOUT_KEY, DEFAULT_ABOUT));
             int imageResId = sharedPreferences.getInt(IMAGE_RESOURCE_ID_KEY, 0);
             if (imageResId != 0) {
                 profileImage.setImageResource(imageResId);
@@ -199,7 +322,7 @@ public class PROFILE_PAGE extends AppCompatActivity {
                 }
             }
         } catch (Exception e) { // Catch all exceptions for robustness
-            Log.e("PROFILE_PAGE", "Error loading data from SharedPreferences. Resetting profile data.", e);
+            Log.e(PAGE_TAG, "Error loading data from SharedPreferences. Resetting profile data.", e);
             // Clear corrupted preferences to prevent future crashes
             sharedPreferences.edit().clear().apply();
             // Reset the UI to its default state
