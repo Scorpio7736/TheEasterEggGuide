@@ -60,6 +60,8 @@ public class MapRecomend_PAGE extends AppCompatActivity {
         mapCell = findViewById(R.id.map_cell);
         mapCoverImage = mapCell.findViewById(R.id.map_cover_image);
         mapNameText = mapCell.findViewById(R.id.map_name_text);
+        View favoriteButton = mapCell.findViewById(R.id.favorite_button);
+        favoriteButton.setVisibility(View.GONE);
 
         recommendMapButton.setOnClickListener(new View.OnClickListener() {
             @Override
