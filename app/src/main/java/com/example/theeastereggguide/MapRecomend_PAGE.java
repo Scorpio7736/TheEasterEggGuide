@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,7 +20,9 @@ public class MapRecomend_PAGE extends AppCompatActivity {
     private final Handler handler = new Handler();
     private List<Map_OBJECT> allMaps;
     private int currentIndex = 0;
-    private ImageView mapDisplayImage;
+    private View mapCell;
+    private ImageView mapCoverImage;
+    private TextView mapNameText;
     private final long startDelay = 50; // ms
     private final long endDelay = 500; // ms
 
@@ -27,7 +30,9 @@ public class MapRecomend_PAGE extends AppCompatActivity {
         @Override
         public void run() {
             if (currentIndex < allMaps.size()) {
-                mapDisplayImage.setImageResource(allMaps.get(currentIndex).getMapIcon());
+                Map_OBJECT currentMap = allMaps.get(currentIndex);
+                mapCoverImage.setImageResource(currentMap.getMapIcon());
+                mapNameText.setText(currentMap.getMapName());
 
                 long delay;
                 int totalMaps = allMaps.size();
@@ -52,13 +57,15 @@ public class MapRecomend_PAGE extends AppCompatActivity {
 
         final ConstraintLayout mapRecommendLayout = findViewById(R.id.map_recommend_layout);
         final Button recommendMapButton = findViewById(R.id.recommend_map_button);
-        mapDisplayImage = findViewById(R.id.map_display_image);
+        mapCell = findViewById(R.id.map_cell);
+        mapCoverImage = mapCell.findViewById(R.id.map_cover_image);
+        mapNameText = mapCell.findViewById(R.id.map_name_text);
 
         recommendMapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mapRecommendLayout.setBackgroundResource(R.drawable.box_open);
-                mapDisplayImage.setVisibility(View.VISIBLE);
+                mapCell.setVisibility(View.VISIBLE);
                 startMapSlideshow();
             }
         });
