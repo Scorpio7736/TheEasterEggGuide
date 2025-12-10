@@ -1,5 +1,6 @@
 package com.example.theeastereggguide;
 
+import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -23,6 +25,8 @@ public class MapRecomend_PAGE extends AppCompatActivity {
     private View mapCell;
     private ImageView mapCoverImage;
     private TextView mapNameText;
+    private Map_OBJECT recommendedMap;
+    private boolean slideshowFinished = false;
     private final long startDelay = 50; // ms
     private final long endDelay = 500; // ms
 
@@ -30,9 +34,9 @@ public class MapRecomend_PAGE extends AppCompatActivity {
         @Override
         public void run() {
             if (currentIndex < allMaps.size()) {
-                Map_OBJECT currentMap = allMaps.get(currentIndex);
-                mapCoverImage.setImageResource(currentMap.getMapIcon());
-                mapNameText.setText(currentMap.getMapName());
+                recommendedMap = allMaps.get(currentIndex);
+                mapCoverImage.setImageResource(recommendedMap.getMapIcon());
+                mapNameText.setText(recommendedMap.getMapName());
 
                 long delay;
                 int totalMaps = allMaps.size();
@@ -45,7 +49,7 @@ public class MapRecomend_PAGE extends AppCompatActivity {
                 currentIndex++;
                 handler.postDelayed(this, delay);
             } else {
-                // Slideshow finished, the last image remains on screen.
+                slideshowFinished = true;
             }
         }
     };
@@ -71,12 +75,25 @@ public class MapRecomend_PAGE extends AppCompatActivity {
                 startMapSlideshow();
             }
         });
+
+        mapCell.setOnClickListener(v -> {
+            if (slideshowFinished) {
+                Intent intent = new Intent(MapRecomend_PAGE.this, MAPPEGG_PAGE.class);
+                intent.putExtra("mapName", recommendedMap.getMapName());
+                intent.putExtra("mainQuest", recommendedMap.getMainQuest());
+                intent.putExtra("sideQuests", (Serializable) recommendedMap.getSideQuests());
+                intent.putExtra("buildables", (Serializable) recommendedMap.getBuildables());
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     private void startMapSlideshow() {
         allMaps = new ArrayList<>(mapsObjectHandler.getAllMaps());
         Collections.shuffle(allMaps);
         currentIndex = 0;
+        slideshowFinished = false;
         handler.post(slideshowRunnable);
     }
 
