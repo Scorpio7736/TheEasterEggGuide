@@ -43,7 +43,7 @@
                     android:layout_height="30dp"
                     android:layout_gravity="bottom|end"
                     android:src="@drawable/ic_camera_edit"
-                    android:background="@drawable/camera_icon_background" 
+                    android:background="@drawable/camera_icon_background"
                     android:padding="4dp"/>
 
             </FrameLayout>
@@ -114,29 +114,30 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/save_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android.background="@drawable/custom_button_background"
                 android:text="Save"
-                android:textColor="@color/CUSTOM_ITEM_text_primary_light"
-                app:layout_constraintTop_toBottomOf="@+id/about_me_edittext"
+                app:layout_constraintEnd_toStartOf="@+id/cancel_button"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/cancel_button" />
-                
-            <androidx.appcompat.widget.AppCompatButton
+                app:layout_constraintTop_toBottomOf="@+id/about_me_edittext" />
+
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/cancel_button"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/custom_button_background"
+                android:layout_marginStart="16dp"
                 android:text="Cancel"
-                android:textColor="@color/CUSTOM_ITEM_text_primary_light"
-                app:layout_constraintTop_toBottomOf="@+id/about_me_edittext"
+                app:layout_constraintBottom_toBottomOf="@+id/save_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/save_button"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/save_button" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
