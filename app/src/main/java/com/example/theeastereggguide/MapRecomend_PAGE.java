@@ -1,6 +1,8 @@
 package com.example.theeastereggguide;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -28,6 +30,9 @@ public class MapRecomend_PAGE extends AppCompatActivity {
     private Handler handler = new Handler();
     private Runnable mapCycler;
     private MediaPlayer mediaPlayer;
+    private Runnable enableButtonRunnable;
+    private static final String PREFS_NAME = "Settings";
+    private static final String SOUND_ENABLED_KEY = "sound_enabled";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +55,11 @@ public class MapRecomend_PAGE extends AppCompatActivity {
             }
             if (mediaPlayer != null) {
                 mediaPlayer.release();
+                mediaPlayer = null;
             }
-
-            mediaPlayer = MediaPlayer.create(MapRecomend_PAGE.this, R.raw.mystery_box_opening);
+            if (enableButtonRunnable != null) {
+                handler.removeCallbacks(enableButtonRunnable);
+            }
 
             mapRecommendLayout.setBackgroundResource(R.drawable.box_open);
             mapCell.setVisibility(View.VISIBLE);
@@ -73,7 +80,27 @@ public class MapRecomend_PAGE extends AppCompatActivity {
                 };
                 handler.post(mapCycler);
 
-                mediaPlayer.start();
+                SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+                boolean soundEnabled = settings.getBoolean(SOUND_ENABLED_KEY, true);
+                boolean soundPlayed = false;
+
+                if (soundEnabled) {
+                    mediaPlayer = MediaPlayer.create(MapRecomend_PAGE.this, R.raw.mystery_box_opening);
+                    if (mediaPlayer != null) {
+                        mediaPlayer.start();
+                        mediaPlayer.setOnCompletionListener(mp -> {
+                            mp.release();
+                            mediaPlayer = null;
+                            recommendMapButton.setEnabled(true);
+                        });
+                        soundPlayed = true;
+                    }
+                }
+
+                if (!soundPlayed) {
+                    enableButtonRunnable = () -> recommendMapButton.setEnabled(true);
+                    handler.postDelayed(enableButtonRunnable, 6000);
+                }
 
                 handler.postDelayed(() -> {
                     handler.removeCallbacks(mapCycler);
@@ -81,12 +108,6 @@ public class MapRecomend_PAGE extends AppCompatActivity {
                     mapNameText.setText(recommendedMap.getMapName());
                 }, 6000);
 
-
-                mediaPlayer.setOnCompletionListener(mp -> {
-                    mp.release();
-                    mediaPlayer = null;
-                    recommendMapButton.setEnabled(true);
-                });
             } else {
                 recommendMapButton.setEnabled(true);
             }
@@ -121,8 +142,13 @@ public class MapRecomend_PAGE extends AppCompatActivity {
             mediaPlayer.release();
             mediaPlayer = null;
         }
-        if (handler != null && mapCycler != null) {
-            handler.removeCallbacks(mapCycler);
+        if (handler != null) {
+            if (mapCycler != null) {
+                handler.removeCallbacks(mapCycler);
+            }
+            if (enableButtonRunnable != null) {
+                handler.removeCallbacks(enableButtonRunnable);
+            }
         }
     }
 }
