@@ -3,6 +3,7 @@ package com.example.theeastereggguide;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,6 +56,8 @@ public class Map_Page_Cell {
         });
 
         cellView.setOnClickListener(v -> {
+            final MediaPlayer mediaPlayer = MediaPlayer.create(context, R.raw.mystery_box_opening);
+            mediaPlayer.start();
             Intent intent = new Intent(context, MAPPEGG_PAGE.class);
             intent.putExtra("mapName", mapData.getMapName());
             intent.putExtra("mainQuest", mapData.getMainQuest());
