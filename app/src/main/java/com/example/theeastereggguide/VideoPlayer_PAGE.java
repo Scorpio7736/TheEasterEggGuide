@@ -15,7 +15,8 @@ public class VideoPlayer_PAGE extends AppCompatActivity {
         setContentView(R.layout.video_player_page);
 
         VideoView videoView = findViewById(R.id.video_view);
-        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.samplevideouwgb;
+        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.how_to;
+        //https://www.youtube.com/watch?v=4xxWV-RCaGs how to video link
         Uri uri = Uri.parse(videoPath);
         videoView.setVideoURI(uri);
 
