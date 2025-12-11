@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,6 +37,27 @@ public class MAPPEGG_PAGE extends AppCompatActivity {
 
         LinearLayout buildablesContent = findViewById(R.id.buildables_content);
         populateExpandableList(buildablesContent, buildables);
+
+        ImageButton shareSideQuestsButton = findViewById(R.id.share_side_quests_button);
+        shareSideQuestsButton.setOnClickListener(v -> {
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.setType("text/plain");
+            String shareBody = "Side Quests for " + mapName + ":\n\n";
+            if (sideQuests != null) {
+                for (ExpandableItem item : sideQuests) {
+                    shareBody += item.getName() + ":\n";
+                    ArrayList<String> steps = item.getSteps();
+                    if (steps != null && !steps.isEmpty()) {
+                        for (int i = 0; i < steps.size(); i++) {
+                            shareBody += (i + 1) + ". " + steps.get(i) + "\n";
+                        }
+                    }
+                    shareBody += "\n";
+                }
+            }
+            shareIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+            startActivity(Intent.createChooser(shareIntent, "Share Side Quests"));
+        });
     }
 
     private void populateExpandableList(LinearLayout container, ArrayList<ExpandableItem> items) {

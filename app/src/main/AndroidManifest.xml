@@ -36,6 +36,7 @@
         <activity android:name=".EasterEgg_Reveal_Page" />
         <activity android:name=".MusicSettings_PAGE" />
         <activity android:name=".MapRecomend_PAGE" />
+        <activity android:name=".VideoPlayer_PAGE" />
         
         <provider
             android:name="androidx.core.content.FileProvider"

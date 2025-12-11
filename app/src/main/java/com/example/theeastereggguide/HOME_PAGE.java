@@ -75,6 +75,12 @@ public class HOME_PAGE extends AppCompatActivity {
             overridePendingTransition(R.anim.slide_in_up, R.anim.stay);
         });
 
+        Button howToPlayButton = findViewById(R.id.how_to_play_button);
+        howToPlayButton.setOnClickListener(v -> {
+            Intent intent = new Intent(HOME_PAGE.this, VideoPlayer_PAGE.class);
+            startActivity(intent);
+        });
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setItemIconTintList(null);
         bottomNavigationView.setSelectedItemId(R.id.nav_home);
